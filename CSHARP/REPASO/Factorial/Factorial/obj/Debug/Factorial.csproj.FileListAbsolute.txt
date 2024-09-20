@@ -1,0 +1,7 @@
+D:\C\REPASO\Factorial\Factorial\bin\Debug\Factorial.exe.config
+D:\C\REPASO\Factorial\Factorial\bin\Debug\Factorial.exe
+D:\C\REPASO\Factorial\Factorial\bin\Debug\Factorial.pdb
+D:\C\REPASO\Factorial\Factorial\obj\Debug\Factorial.csproj.AssemblyReference.cache
+D:\C\REPASO\Factorial\Factorial\obj\Debug\Factorial.csproj.CoreCompileInputs.cache
+D:\C\REPASO\Factorial\Factorial\obj\Debug\Factorial.exe
+D:\C\REPASO\Factorial\Factorial\obj\Debug\Factorial.pdb

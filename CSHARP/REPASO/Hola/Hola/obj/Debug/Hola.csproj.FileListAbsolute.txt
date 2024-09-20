@@ -1,0 +1,7 @@
+D:\C\REPASO\Hola\Hola\bin\Debug\Hola.exe.config
+D:\C\REPASO\Hola\Hola\bin\Debug\Hola.exe
+D:\C\REPASO\Hola\Hola\bin\Debug\Hola.pdb
+D:\C\REPASO\Hola\Hola\obj\Debug\Hola.csproj.AssemblyReference.cache
+D:\C\REPASO\Hola\Hola\obj\Debug\Hola.csproj.CoreCompileInputs.cache
+D:\C\REPASO\Hola\Hola\obj\Debug\Hola.exe
+D:\C\REPASO\Hola\Hola\obj\Debug\Hola.pdb
