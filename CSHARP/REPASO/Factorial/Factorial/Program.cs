@@ -33,7 +33,10 @@ namespace Factorial
             }
             //ESCRIBO EL RESULTADO
             Console.WriteLine($"El factorial de {n} es: {fact}");
+            
             Console.ReadKey();
+
+
 
         }
     }

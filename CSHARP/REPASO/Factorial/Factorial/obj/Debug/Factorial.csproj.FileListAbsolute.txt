@@ -5,3 +5,10 @@ D:\C\REPASO\Factorial\Factorial\obj\Debug\Factorial.csproj.AssemblyReference.cac
 D:\C\REPASO\Factorial\Factorial\obj\Debug\Factorial.csproj.CoreCompileInputs.cache
 D:\C\REPASO\Factorial\Factorial\obj\Debug\Factorial.exe
 D:\C\REPASO\Factorial\Factorial\obj\Debug\Factorial.pdb
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Factorial\Factorial\bin\Debug\Factorial.exe.config
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Factorial\Factorial\bin\Debug\Factorial.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Factorial\Factorial\bin\Debug\Factorial.pdb
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Factorial\Factorial\obj\Debug\Factorial.csproj.AssemblyReference.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Factorial\Factorial\obj\Debug\Factorial.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Factorial\Factorial\obj\Debug\Factorial.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Factorial\Factorial\obj\Debug\Factorial.pdb
