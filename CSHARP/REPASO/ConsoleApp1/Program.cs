@@ -11,7 +11,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Introdoce un número");
-            int numero = int.Parse (Console.ReadLine());
+            int numero = int.Parse(Console.ReadLine());
             Console.WriteLine($"Los divisores de {numero} son: ");
 
             for (int i = 2; i < numero; i++)

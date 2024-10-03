@@ -1,0 +1,7 @@
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\fibonacci\bin\Debug\fibonacci.exe.config
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\fibonacci\bin\Debug\fibonacci.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\fibonacci\bin\Debug\fibonacci.pdb
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\fibonacci\obj\Debug\fibonacci.csproj.AssemblyReference.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\fibonacci\obj\Debug\fibonacci.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\fibonacci\obj\Debug\fibonacci.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\fibonacci\obj\Debug\fibonacci.pdb

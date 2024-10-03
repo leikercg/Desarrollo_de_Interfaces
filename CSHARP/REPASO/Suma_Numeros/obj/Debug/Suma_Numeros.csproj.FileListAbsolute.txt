@@ -1,0 +1,7 @@
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Suma_Numeros\bin\Debug\Suma_Numeros.exe.config
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Suma_Numeros\bin\Debug\Suma_Numeros.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Suma_Numeros\bin\Debug\Suma_Numeros.pdb
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Suma_Numeros\obj\Debug\Suma_Numeros.csproj.AssemblyReference.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Suma_Numeros\obj\Debug\Suma_Numeros.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Suma_Numeros\obj\Debug\Suma_Numeros.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Suma_Numeros\obj\Debug\Suma_Numeros.pdb
