@@ -1,0 +1,7 @@
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Numero_Primo\bin\Debug\Numero_Primo.exe.config
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Numero_Primo\bin\Debug\Numero_Primo.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Numero_Primo\bin\Debug\Numero_Primo.pdb
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Numero_Primo\obj\Debug\Numero_Primo.csproj.AssemblyReference.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Numero_Primo\obj\Debug\Numero_Primo.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Numero_Primo\obj\Debug\Numero_Primo.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Numero_Primo\obj\Debug\Numero_Primo.pdb
