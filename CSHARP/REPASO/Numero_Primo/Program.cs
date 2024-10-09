@@ -28,7 +28,7 @@ namespace Numero_Primo
             // Variables
             int i = 2; // Evitamos el 1, ya que todos son divisibles enrte 1
             bool esPrimo = true;
-
+            
             while (i < num)
             {
                 // Si encontramos un divisor exacto

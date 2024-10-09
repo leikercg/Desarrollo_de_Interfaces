@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divisores", "Divisores.csproj", "{377731F7-49E1-46A7-B6B5-F6E24AE98DDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contar_caracteres", "Contar_caracteres.csproj", "{D4E0992C-D298-4CA4-8F55-830638959684}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{377731F7-49E1-46A7-B6B5-F6E24AE98DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{377731F7-49E1-46A7-B6B5-F6E24AE98DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{377731F7-49E1-46A7-B6B5-F6E24AE98DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{377731F7-49E1-46A7-B6B5-F6E24AE98DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E0992C-D298-4CA4-8F55-830638959684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E0992C-D298-4CA4-8F55-830638959684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E0992C-D298-4CA4-8F55-830638959684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E0992C-D298-4CA4-8F55-830638959684}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D8F78F1F-0BA0-4B8F-9C2A-0161D733D81C}
+		SolutionGuid = {33A6EC55-2C4F-4B35-B5D8-09EF3464A5A6}
 	EndGlobalSection
 EndGlobal
