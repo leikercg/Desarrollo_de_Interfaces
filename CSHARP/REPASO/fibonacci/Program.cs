@@ -18,14 +18,13 @@ namespace fibonacci
             bool encontrado = false;
 
             
-            while (i<100)
+            while (i<100 && !encontrado)
             {
                 // Imprimir números que contienen 9
                 if (numActual % 10 == 9)
                 {
-                    Console.WriteLine($"Acaba en 9: {numActual}");
-                    encontrado = true;
-    
+                    Console.WriteLine($"El primer número que acaba en 9: {numActual}");
+                    encontrado = true;    
                 }
 
                 // Calcular el siguiente número
