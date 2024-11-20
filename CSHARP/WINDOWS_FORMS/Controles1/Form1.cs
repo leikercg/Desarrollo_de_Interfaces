@@ -47,6 +47,88 @@ namespace Controles1
             }
         }
 
-     
+        private void buttonMostratMatricula_Click(object sender, EventArgs e)
+        {
+            label2.Text =$"El nombre de la alumna/o: {nombre.Text} está matriculado en: ";
+
+            if (radioButtonPrimero.Checked)
+            {
+                label2.Text = $"El nombre de la alumna/o: {nombre.Text} está matriculado en: {radioButtonPrimero.Text}";
+
+            }
+            else if(radioButtonSegundo.Checked)
+            {
+                label2.Text= $"El nombre de la alumna/o: {nombre.Text} está matriculado en: {radioButtonSegundo.Text}";
+
+            }
+
+            if ((checkBoxDam.Checked && checkBoxDaw.Checked) && radioButtonPrimero.Checked)
+            {
+
+                MessageBox.Show("No sepuede matricular en ambos en primero");
+
+            }
+            else
+            {
+                if (checkBoxDam.Checked && checkBoxDaw.Checked)
+                {
+                    label2.Text += "DAM y DAW";
+                }
+                 else if (checkBoxDam.Checked)
+                {
+                    label2.Text += $", {checkBoxDam.Text}";
+
+                }
+                else if (checkBoxDaw.Checked)
+                {
+                    label2.Text += $", {checkBoxDaw.Text}";
+                }
+            }
+
+       
+
+           
+
+        }
+
+        private void checkBoxAceptarCondiciones_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxAceptarCondiciones.Checked)
+            {
+                buttonMostratMatricula.Enabled = true;
+         
+            }
+            else
+            {
+                buttonMostratMatricula.Enabled = false;
+
+            }
+        }
+
+        private void radioButtonColor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonColor.Checked)
+            {
+                this.BackColor = System.Drawing.Color.Aqua;
+            }
+            else
+            {
+                this.BackColor = System.Drawing.Color.RosyBrown;
+            }
+
+        }
+
+        private void radioButtonTamaño_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonTamaño.Checked)
+            {
+                this.ClientSize = new System.Drawing.Size(900, 1000);
+            }
+            else
+            {
+                this.ClientSize = new System.Drawing.Size(800, 450);
+
+            }
+        }
     }
 }   
