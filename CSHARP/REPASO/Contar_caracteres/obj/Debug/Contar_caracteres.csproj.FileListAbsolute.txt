@@ -1,0 +1,7 @@
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Contar_caracteres\bin\Debug\Contar_caracteres.exe.config
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Contar_caracteres\bin\Debug\Contar_caracteres.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Contar_caracteres\bin\Debug\Contar_caracteres.pdb
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Contar_caracteres\obj\Debug\Contar_caracteres.csproj.AssemblyReference.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Contar_caracteres\obj\Debug\Contar_caracteres.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Contar_caracteres\obj\Debug\Contar_caracteres.exe
+D:\DESARROLLO_INTERFACES\CSHARP\REPASO\Contar_caracteres\obj\Debug\Contar_caracteres.pdb

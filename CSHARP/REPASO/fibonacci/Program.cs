@@ -10,30 +10,31 @@ namespace fibonacci
     {
         static void Main()
         {
-            // Definir los dos primeros números de Fibonacci
-            long fibAnterior = 0;
-            long fibActual = 1;
+            // Variables
+            int numAnterior = 0;
+            int numActual = 1;
 
+            int i = 0;
             bool encontrado = false;
 
-            // Generar los primeros 1000 números de Fibonacci
-            for (int i = 0; i < 1000; i++)
+            
+            while (i<100 && !encontrado)
             {
-                // Comprobar si el último dígito del número actual de Fibonacci es 9
-                if (fibActual % 10 == 9)
+                // Imprimir números que contienen 9
+                if (numActual % 10 == 9)
                 {
-                    Console.WriteLine($"El número de Fibonacci que termina en 9 es: {fibActual}");
-                    encontrado = true;
-                    break; // Salir del bucle si encontramos el número
+                    Console.WriteLine($"El primer número que acaba en 9: {numActual}");
+                    encontrado = true;    
                 }
 
-                // Calcular el siguiente número de Fibonacci
-                long fibSiguiente = fibAnterior + fibActual;
-                fibAnterior = fibActual;
-                fibActual = fibSiguiente;
+                // Calcular el siguiente número
+                int numSiguiente = numAnterior + numActual;
+                numAnterior = numActual;
+                numActual = numSiguiente;
+                i++;
             }
 
-            // Si no se encontró ningún número que termine en 9
+            // Si no existe imrpimir -1
             if (!encontrado)
             {
                 Console.WriteLine("-1");

@@ -1,0 +1,10 @@
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\bin\Debug\Controles1.exe.config
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\bin\Debug\Controles1.exe
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\bin\Debug\Controles1.pdb
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\obj\Debug\Controles1.csproj.AssemblyReference.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\obj\Debug\Controles1.Form1.resources
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\obj\Debug\Controles1.Properties.Resources.resources
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\obj\Debug\Controles1.csproj.GenerateResource.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\obj\Debug\Controles1.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\obj\Debug\Controles1.exe
+D:\DESARROLLO_INTERFACES\CSHARP\WINDOWS_FORMS\Controles1\obj\Debug\Controles1.pdb
