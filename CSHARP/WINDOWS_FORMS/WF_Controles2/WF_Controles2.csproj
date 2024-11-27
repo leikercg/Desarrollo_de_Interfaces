@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9FAE3A9B-EDC5-44E8-B008-3A3CEEA8ABD1}</ProjectGuid>
+    <ProjectGuid>{D84D2270-0671-4E38-89DC-7E2872596AE0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WF_menu1</RootNamespace>
-    <AssemblyName>WF_menu1</AssemblyName>
+    <RootNamespace>WF_Controles2</RootNamespace>
+    <AssemblyName>WF_Controles2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,28 +52,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAyudaTexto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAyudaTexto.Designer.cs">
-      <DependentUpon>FormAyudaTexto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioCambiarTamaño.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioCambiarTamaño.Designer.cs">
-      <DependentUpon>FormularioCambiarTamaño.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAyudaTexto.resx">
-      <DependentUpon>FormAyudaTexto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioCambiarTamaño.resx">
-      <DependentUpon>FormularioCambiarTamaño.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

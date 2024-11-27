@@ -12,9 +12,9 @@ using System.IO; // Trabajar con ficheros
 
 namespace WF_menu1
 {
-    public partial class Form1 : Form
+    public partial class ass : Form
     {
-        public Form1()
+        public ass()
         {
             InitializeComponent();
         }
@@ -97,6 +97,49 @@ namespace WF_menu1
             {
                 textBox.Font = fontDialog1.Font;
             }
+        }
+
+       
+        private void cambiarColorFondoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox.BackColor = colorDialog1.Color;
+            }
+
+        }
+
+        private void cambiarColorFuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox.ForeColor = colorDialog1.Color;
+            }
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAyudaTexto formAyudaTexto = new FormAyudaTexto(); // instanciamos una ventana
+            formAyudaTexto.ShowDialog(); // La mostramos
+            //formAyudaTexto.Show(); // La mostramos infinitamente  
+
+        }
+
+        private void cambiarTamañoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioCambiarTamaño formularioCambiarTamaño = new FormularioCambiarTamaño();
+            formularioCambiarTamaño.ShowDialog();
+
+            // Compruebo si se ha pulsado el boton aceptar o el boton cancelar
+
+           if(formularioCambiarTamaño.DialogResult == DialogResult.OK)
+            {
+                this.Width = formularioCambiarTamaño.Ancho;
+                this.Height = formularioCambiarTamaño.Alto;
+
+            }
+
         }
     }
 }
