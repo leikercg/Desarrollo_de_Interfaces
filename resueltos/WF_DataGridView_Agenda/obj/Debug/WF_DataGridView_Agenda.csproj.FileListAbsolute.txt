@@ -1,0 +1,10 @@
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\bin\Debug\WF_DataGridView_Agenda.exe.config
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\bin\Debug\WF_DataGridView_Agenda.exe
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\bin\Debug\WF_DataGridView_Agenda.pdb
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\obj\Debug\WF_DataGridView_Agenda.csproj.AssemblyReference.cache
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\obj\Debug\WF_DataGridView_Agenda.Form1.resources
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\obj\Debug\WF_DataGridView_Agenda.Properties.Resources.resources
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\obj\Debug\WF_DataGridView_Agenda.csproj.GenerateResource.cache
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\obj\Debug\WF_DataGridView_Agenda.csproj.CoreCompileInputs.cache
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\obj\Debug\WF_DataGridView_Agenda.exe
+D:\CSHARP\WINDOWS_FORMS\WF_DataGridView_Agenda\obj\Debug\WF_DataGridView_Agenda.pdb

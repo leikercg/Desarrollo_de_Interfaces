@@ -1,0 +1,10 @@
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\bin\Debug\WF_Controles1.exe.config
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\bin\Debug\WF_Controles1.exe
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\bin\Debug\WF_Controles1.pdb
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\obj\Debug\WF_Controles1.csproj.AssemblyReference.cache
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\obj\Debug\WF_Controles1.Form1.resources
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\obj\Debug\WF_Controles1.Properties.Resources.resources
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\obj\Debug\WF_Controles1.csproj.GenerateResource.cache
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\obj\Debug\WF_Controles1.csproj.CoreCompileInputs.cache
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\obj\Debug\WF_Controles1.exe
+D:\CSHARP\WINDOWS_FORMS\WF_Controles1\obj\Debug\WF_Controles1.pdb

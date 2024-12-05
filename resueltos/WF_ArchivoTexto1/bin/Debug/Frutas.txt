@@ -1,0 +1,6 @@
+﻿mandarinas
+naranjas
+limones
+peras
+granadas
+kiwi
