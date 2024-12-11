@@ -1,0 +1,11 @@
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\bin\Debug\WF_ControlPersonalizado.exe.config
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\bin\Debug\WF_ControlPersonalizado.exe
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\bin\Debug\WF_ControlPersonalizado.pdb
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\obj\Debug\WF_ControlPersonalizado.csproj.AssemblyReference.cache
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\obj\Debug\WF_ControlPersonalizado.ElegirColor.resources
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\obj\Debug\WF_ControlPersonalizado.Properties.Resources.resources
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\obj\Debug\WF_ControlPersonalizado.csproj.GenerateResource.cache
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\obj\Debug\WF_ControlPersonalizado.csproj.CoreCompileInputs.cache
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\obj\Debug\WF_ControlPersonalizado.exe
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\obj\Debug\WF_ControlPersonalizado.pdb
+D:\CSHARP\WINDOWS_FORMS\WF_ControlPersonalizado\obj\Debug\WF_ControlPersonalizado.Form1.resources

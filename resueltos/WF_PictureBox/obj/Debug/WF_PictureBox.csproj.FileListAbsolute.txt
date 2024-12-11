@@ -1,0 +1,10 @@
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\bin\Debug\WF_PictureBox.exe.config
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\bin\Debug\WF_PictureBox.exe
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\bin\Debug\WF_PictureBox.pdb
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\obj\Debug\WF_PictureBox.csproj.AssemblyReference.cache
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\obj\Debug\WF_PictureBox.Form1.resources
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\obj\Debug\WF_PictureBox.Properties.Resources.resources
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\obj\Debug\WF_PictureBox.csproj.GenerateResource.cache
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\obj\Debug\WF_PictureBox.csproj.CoreCompileInputs.cache
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\obj\Debug\WF_PictureBox.exe
+D:\CSHARP\WINDOWS_FORMS\WF_PictureBox\obj\Debug\WF_PictureBox.pdb

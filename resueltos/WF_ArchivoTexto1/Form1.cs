@@ -32,10 +32,22 @@ namespace WF_ArchivoTexto1
             archivo.Close();
             archivo.Dispose();
             MessageBox.Show("Se ha guardado la compra");
+
+            // mostrar las frutas compradas
+            StreamReader archivo1 = new StreamReader(Directory.GetCurrentDirectory() + "\\compra.txt");
+            while (!archivo1.EndOfStream)
+            {
+                string line = archivo1.ReadLine();
+                checkedListBox2.Items.Add(line);
+            }
+            archivo1.Close();
+            archivo1.Dispose(); 
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // rellenar los checkbox con los elementos del texto
             StreamReader archivo = new StreamReader(Directory.GetCurrentDirectory() + "\\Frutas.txt");
             while (!archivo.EndOfStream)
             {
@@ -44,14 +56,13 @@ namespace WF_ArchivoTexto1
             }
             archivo.Close();
             archivo.Dispose();
-            StreamReader archivo1 = new StreamReader(Directory.GetCurrentDirectory() + "\\Frutas.txt");
-            while (!archivo1.EndOfStream)
-            {
-                string line = archivo1.ReadLine();
-                checkedListBox2.Items.Add(line);
-            }
-            archivo1.Close();
-            archivo1.Dispose();
+
+        
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
