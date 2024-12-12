@@ -18,3 +18,13 @@ D:\DESARROLLO_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.c
 D:\DESARROLLO_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.csproj.CoreCompileInputs.cache
 D:\DESARROLLO_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.exe
 D:\DESARROLLO_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.pdb
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\bin\Debug\WF_ArchivoTexto1.exe.config
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\bin\Debug\WF_ArchivoTexto1.exe
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\bin\Debug\WF_ArchivoTexto1.pdb
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.csproj.AssemblyReference.cache
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.Form1.resources
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.Properties.Resources.resources
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.csproj.GenerateResource.cache
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.exe
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_ArchivoTexto1\obj\Debug\WF_ArchivoTexto1.pdb

@@ -84,6 +84,7 @@
     <Content Include="bin\Debug\COLORES\azul.png" />
     <Content Include="bin\Debug\COLORES\rojo.png" />
     <Content Include="bin\Debug\COLORES\verde.png" />
+    <None Include="Resources\sun.png" />
     <None Include="Resources\Visual_Studio1.jpg" />
     <None Include="Resources\Visual_Studio.jpg" />
     <None Include="Resources\verde.png" />

@@ -75,7 +75,7 @@
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.Size = new System.Drawing.Size(171, 31);
             this.tbContraseña.TabIndex = 1;
-            this.tbContraseña.Text = "uno\r\n\r\n";
+            this.tbContraseña.Text = " ";
             this.tbContraseña.UseSystemPasswordChar = true;
             // 
             // label1
@@ -102,7 +102,7 @@
             // lbMensaje
             // 
             this.lbMensaje.AutoSize = true;
-            this.lbMensaje.Location = new System.Drawing.Point(255, 139);
+            this.lbMensaje.Location = new System.Drawing.Point(416, 353);
             this.lbMensaje.Name = "lbMensaje";
             this.lbMensaje.Size = new System.Drawing.Size(0, 16);
             this.lbMensaje.TabIndex = 4;
@@ -120,10 +120,11 @@
             // tbNombre
             // 
             this.tbNombre.Location = new System.Drawing.Point(212, 71);
-            this.tbNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(132, 22);
             this.tbNombre.TabIndex = 6;
+            this.tbNombre.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -137,8 +138,8 @@
             // 
             // tbApellido
             // 
-            this.tbApellido.Location = new System.Drawing.Point(212, 128);
-            this.tbApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbApellido.Location = new System.Drawing.Point(209, 126);
+            this.tbApellido.Margin = new System.Windows.Forms.Padding(4);
             this.tbApellido.Name = "tbApellido";
             this.tbApellido.Size = new System.Drawing.Size(132, 22);
             this.tbApellido.TabIndex = 8;
@@ -148,9 +149,9 @@
             this.groupBox1.Controls.Add(this.rbSegundo);
             this.groupBox1.Controls.Add(this.rbPrimero);
             this.groupBox1.Location = new System.Drawing.Point(55, 192);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(175, 123);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
@@ -160,7 +161,7 @@
             // 
             this.rbSegundo.AutoSize = true;
             this.rbSegundo.Location = new System.Drawing.Point(48, 92);
-            this.rbSegundo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbSegundo.Margin = new System.Windows.Forms.Padding(4);
             this.rbSegundo.Name = "rbSegundo";
             this.rbSegundo.Size = new System.Drawing.Size(40, 20);
             this.rbSegundo.TabIndex = 1;
@@ -172,7 +173,7 @@
             // 
             this.rbPrimero.AutoSize = true;
             this.rbPrimero.Location = new System.Drawing.Point(48, 42);
-            this.rbPrimero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbPrimero.Margin = new System.Windows.Forms.Padding(4);
             this.rbPrimero.Name = "rbPrimero";
             this.rbPrimero.Size = new System.Drawing.Size(40, 20);
             this.rbPrimero.TabIndex = 0;
@@ -196,9 +197,9 @@
             this.groupBox2.Controls.Add(this.cboxDaw);
             this.groupBox2.Controls.Add(this.cboxDam);
             this.groupBox2.Location = new System.Drawing.Point(304, 199);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(267, 123);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
@@ -207,9 +208,9 @@
             // groupBox3
             // 
             this.groupBox3.Location = new System.Drawing.Point(252, 27);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(267, 123);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
@@ -219,7 +220,7 @@
             // 
             this.cboxDaw.AutoSize = true;
             this.cboxDaw.Location = new System.Drawing.Point(28, 85);
-            this.cboxDaw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboxDaw.Margin = new System.Windows.Forms.Padding(4);
             this.cboxDaw.Name = "cboxDaw";
             this.cboxDaw.Size = new System.Drawing.Size(61, 20);
             this.cboxDaw.TabIndex = 1;
@@ -230,7 +231,7 @@
             // 
             this.cboxDam.AutoSize = true;
             this.cboxDam.Location = new System.Drawing.Point(28, 34);
-            this.cboxDam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboxDam.Margin = new System.Windows.Forms.Padding(4);
             this.cboxDam.Name = "cboxDam";
             this.cboxDam.Size = new System.Drawing.Size(59, 20);
             this.cboxDam.TabIndex = 0;
@@ -240,7 +241,7 @@
             // btnMostrarMatricula
             // 
             this.btnMostrarMatricula.Location = new System.Drawing.Point(443, 137);
-            this.btnMostrarMatricula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMostrarMatricula.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarMatricula.Name = "btnMostrarMatricula";
             this.btnMostrarMatricula.Size = new System.Drawing.Size(357, 28);
             this.btnMostrarMatricula.TabIndex = 12;
@@ -252,7 +253,7 @@
             // 
             this.chboxAceptar.AutoSize = true;
             this.chboxAceptar.Location = new System.Drawing.Point(436, 14);
-            this.chboxAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chboxAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.chboxAceptar.Name = "chboxAceptar";
             this.chboxAceptar.Size = new System.Drawing.Size(152, 20);
             this.chboxAceptar.TabIndex = 13;
@@ -264,7 +265,7 @@
             // 
             this.rb800.AutoSize = true;
             this.rb800.Location = new System.Drawing.Point(590, 249);
-            this.rb800.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb800.Margin = new System.Windows.Forms.Padding(4);
             this.rb800.Name = "rb800";
             this.rb800.Size = new System.Drawing.Size(100, 20);
             this.rb800.TabIndex = 0;
