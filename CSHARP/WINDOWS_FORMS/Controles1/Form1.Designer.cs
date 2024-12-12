@@ -34,16 +34,16 @@
             this.btn_saludar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.radioButtonPrimero = new System.Windows.Forms.RadioButton();
             this.radioButtonSegundo = new System.Windows.Forms.RadioButton();
+            this.radioButtonPrimero = new System.Windows.Forms.RadioButton();
             this.groupBoxCiclo = new System.Windows.Forms.GroupBox();
-            this.checkBoxDam = new System.Windows.Forms.CheckBox();
             this.checkBoxDaw = new System.Windows.Forms.CheckBox();
+            this.checkBoxDam = new System.Windows.Forms.CheckBox();
             this.buttonMostratMatricula = new System.Windows.Forms.Button();
             this.checkBoxAceptarCondiciones = new System.Windows.Forms.CheckBox();
             this.groupBoxFormato = new System.Windows.Forms.GroupBox();
-            this.radioButtonColor = new System.Windows.Forms.RadioButton();
             this.radioButtonTamaño = new System.Windows.Forms.RadioButton();
+            this.radioButtonColor = new System.Windows.Forms.RadioButton();
             this.groupBox.SuspendLayout();
             this.groupBoxCiclo.SuspendLayout();
             this.groupBoxFormato.SuspendLayout();
@@ -108,17 +108,6 @@
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Curso";
             // 
-            // radioButtonPrimero
-            // 
-            this.radioButtonPrimero.AutoSize = true;
-            this.radioButtonPrimero.Location = new System.Drawing.Point(11, 30);
-            this.radioButtonPrimero.Name = "radioButtonPrimero";
-            this.radioButtonPrimero.Size = new System.Drawing.Size(35, 17);
-            this.radioButtonPrimero.TabIndex = 0;
-            this.radioButtonPrimero.TabStop = true;
-            this.radioButtonPrimero.Text = "1º";
-            this.radioButtonPrimero.UseVisualStyleBackColor = true;
-            // 
             // radioButtonSegundo
             // 
             this.radioButtonSegundo.AutoSize = true;
@@ -129,6 +118,17 @@
             this.radioButtonSegundo.TabStop = true;
             this.radioButtonSegundo.Text = "2º";
             this.radioButtonSegundo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPrimero
+            // 
+            this.radioButtonPrimero.AutoSize = true;
+            this.radioButtonPrimero.Location = new System.Drawing.Point(11, 30);
+            this.radioButtonPrimero.Name = "radioButtonPrimero";
+            this.radioButtonPrimero.Size = new System.Drawing.Size(35, 17);
+            this.radioButtonPrimero.TabIndex = 0;
+            this.radioButtonPrimero.TabStop = true;
+            this.radioButtonPrimero.Text = "1º";
+            this.radioButtonPrimero.UseVisualStyleBackColor = true;
             // 
             // groupBoxCiclo
             // 
@@ -141,16 +141,6 @@
             this.groupBoxCiclo.TabStop = false;
             this.groupBoxCiclo.Text = "Ciclo";
             // 
-            // checkBoxDam
-            // 
-            this.checkBoxDam.AutoSize = true;
-            this.checkBoxDam.Location = new System.Drawing.Point(20, 31);
-            this.checkBoxDam.Name = "checkBoxDam";
-            this.checkBoxDam.Size = new System.Drawing.Size(50, 17);
-            this.checkBoxDam.TabIndex = 0;
-            this.checkBoxDam.Text = "DAM";
-            this.checkBoxDam.UseVisualStyleBackColor = true;
-            // 
             // checkBoxDaw
             // 
             this.checkBoxDaw.AutoSize = true;
@@ -160,6 +150,16 @@
             this.checkBoxDaw.TabIndex = 1;
             this.checkBoxDaw.Text = "DAW";
             this.checkBoxDaw.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxDam
+            // 
+            this.checkBoxDam.AutoSize = true;
+            this.checkBoxDam.Location = new System.Drawing.Point(20, 31);
+            this.checkBoxDam.Name = "checkBoxDam";
+            this.checkBoxDam.Size = new System.Drawing.Size(50, 17);
+            this.checkBoxDam.TabIndex = 0;
+            this.checkBoxDam.Text = "DAM";
+            this.checkBoxDam.UseVisualStyleBackColor = true;
             // 
             // buttonMostratMatricula
             // 
@@ -194,18 +194,6 @@
             this.groupBoxFormato.TabStop = false;
             this.groupBoxFormato.Text = "Formato";
             // 
-            // radioButtonColor
-            // 
-            this.radioButtonColor.AutoSize = true;
-            this.radioButtonColor.Location = new System.Drawing.Point(3, 30);
-            this.radioButtonColor.Name = "radioButtonColor";
-            this.radioButtonColor.Size = new System.Drawing.Size(89, 17);
-            this.radioButtonColor.TabIndex = 0;
-            this.radioButtonColor.TabStop = true;
-            this.radioButtonColor.Text = "Cambiar color";
-            this.radioButtonColor.UseVisualStyleBackColor = true;
-            this.radioButtonColor.CheckedChanged += new System.EventHandler(this.radioButtonColor_CheckedChanged);
-            // 
             // radioButtonTamaño
             // 
             this.radioButtonTamaño.AutoSize = true;
@@ -217,6 +205,18 @@
             this.radioButtonTamaño.Text = "Cambiar tamaño";
             this.radioButtonTamaño.UseVisualStyleBackColor = true;
             this.radioButtonTamaño.CheckedChanged += new System.EventHandler(this.radioButtonTamaño_CheckedChanged);
+            // 
+            // radioButtonColor
+            // 
+            this.radioButtonColor.AutoSize = true;
+            this.radioButtonColor.Location = new System.Drawing.Point(3, 30);
+            this.radioButtonColor.Name = "radioButtonColor";
+            this.radioButtonColor.Size = new System.Drawing.Size(89, 17);
+            this.radioButtonColor.TabIndex = 0;
+            this.radioButtonColor.TabStop = true;
+            this.radioButtonColor.Text = "Cambiar color";
+            this.radioButtonColor.UseVisualStyleBackColor = true;
+            this.radioButtonColor.CheckedChanged += new System.EventHandler(this.radioButtonColor_CheckedChanged);
             // 
             // Form1
             // 

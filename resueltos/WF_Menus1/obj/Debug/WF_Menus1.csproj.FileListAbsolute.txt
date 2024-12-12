@@ -10,3 +10,15 @@ D:\CSHARP\WINDOWS_FORMS\WF_Menus1\obj\Debug\WF_Menus1.exe
 D:\CSHARP\WINDOWS_FORMS\WF_Menus1\obj\Debug\WF_Menus1.pdb
 D:\CSHARP\WINDOWS_FORMS\WF_Menus1\obj\Debug\WF_Menus1.FormAyudaTexto.resources
 D:\CSHARP\WINDOWS_FORMS\WF_Menus1\obj\Debug\WF_Menus1.FormCambiarTamaño.resources
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\bin\Debug\WF_Menus1.exe.config
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\bin\Debug\WF_Menus1.exe
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\bin\Debug\WF_Menus1.pdb
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\obj\Debug\WF_Menus1.csproj.AssemblyReference.cache
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\obj\Debug\WF_Menus1.Form1.resources
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\obj\Debug\WF_Menus1.FormAyudaTexto.resources
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\obj\Debug\WF_Menus1.FormCambiarTamaño.resources
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\obj\Debug\WF_Menus1.Properties.Resources.resources
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\obj\Debug\WF_Menus1.csproj.GenerateResource.cache
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\obj\Debug\WF_Menus1.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\obj\Debug\WF_Menus1.exe
+D:\DESARROLLO_INTERFACES\resueltos\WF_Menus1\obj\Debug\WF_Menus1.pdb

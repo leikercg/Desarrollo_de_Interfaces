@@ -43,6 +43,7 @@ namespace Controles1
             }
             else
             {
+                label2.Text = "";
                 label2.Text = label2.Text + " " + nombre.Text;
             }
         }
@@ -84,11 +85,6 @@ namespace Controles1
                     label2.Text += $", {checkBoxDaw.Text}";
                 }
             }
-
-       
-
-           
-
         }
 
         private void checkBoxAceptarCondiciones_CheckedChanged(object sender, EventArgs e)
@@ -130,5 +126,7 @@ namespace Controles1
 
             }
         }
+
+
     }
 }   

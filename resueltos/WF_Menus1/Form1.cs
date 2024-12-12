@@ -106,7 +106,6 @@ namespace WF_Menus1
                 MessageBox.Show("Se ha guardado el archivo");
             }
         }
-
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.InitialDirectory = @"d:\ARCHIVOS\DE_TEXTO";
