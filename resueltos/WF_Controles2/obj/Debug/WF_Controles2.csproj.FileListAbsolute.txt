@@ -8,3 +8,13 @@ D:\CSHARP\WINDOWS_FORMS\WF_Controles2\obj\Debug\WF_Controles2.csproj.GenerateRes
 D:\CSHARP\WINDOWS_FORMS\WF_Controles2\obj\Debug\WF_Controles2.csproj.CoreCompileInputs.cache
 D:\CSHARP\WINDOWS_FORMS\WF_Controles2\obj\Debug\WF_Controles2.exe
 D:\CSHARP\WINDOWS_FORMS\WF_Controles2\obj\Debug\WF_Controles2.pdb
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\bin\Debug\WF_Controles2.exe.config
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\bin\Debug\WF_Controles2.exe
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\bin\Debug\WF_Controles2.pdb
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\obj\Debug\WF_Controles2.csproj.AssemblyReference.cache
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\obj\Debug\WF_Controles2.Form1.resources
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\obj\Debug\WF_Controles2.Properties.Resources.resources
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\obj\Debug\WF_Controles2.csproj.GenerateResource.cache
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\obj\Debug\WF_Controles2.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\obj\Debug\WF_Controles2.exe
+D:\DESARROLLO_DE_INTERFACES\resueltos\WF_Controles2\obj\Debug\WF_Controles2.pdb
