@@ -1,0 +1,15 @@
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\Wpf_pruebas_binding.csproj.AssemblyReference.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\App.g.cs
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\Wpf_pruebas_binding_MarkupCompile.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\bin\Debug\Wpf_pruebas_binding.exe.config
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\bin\Debug\Wpf_pruebas_binding.exe
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\bin\Debug\Wpf_pruebas_binding.pdb
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\MainWindow.g.cs
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\Wpf_pruebas_binding_MarkupCompile.lref
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\MainWindow.baml
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\Wpf_pruebas_binding.g.resources
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\Wpf_pruebas_binding.Properties.Resources.resources
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\Wpf_pruebas_binding.csproj.GenerateResource.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\Wpf_pruebas_binding.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\Wpf_pruebas_binding.exe
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_pruebas_binding\obj\Debug\Wpf_pruebas_binding.pdb

@@ -1,0 +1,10 @@
+D:\CSHARP\BBDD\WF_BD_Estudiantes\bin\Debug\WF_BD_Estudiantes.exe.config
+D:\CSHARP\BBDD\WF_BD_Estudiantes\bin\Debug\WF_BD_Estudiantes.exe
+D:\CSHARP\BBDD\WF_BD_Estudiantes\bin\Debug\WF_BD_Estudiantes.pdb
+D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.csproj.AssemblyReference.cache
+D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.Form1.resources
+D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.Properties.Resources.resources
+D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.csproj.GenerateResource.cache
+D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.csproj.CoreCompileInputs.cache
+D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.exe
+D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.pdb

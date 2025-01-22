@@ -1,0 +1,15 @@
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\bin\Debug\Wpf_binding2.exe.config
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\bin\Debug\Wpf_binding2.exe
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\bin\Debug\Wpf_binding2.pdb
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\Wpf_binding2.csproj.AssemblyReference.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\MainWindow.g.cs
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\App.g.cs
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\Wpf_binding2_MarkupCompile.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\Wpf_binding2_MarkupCompile.lref
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\MainWindow.baml
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\Wpf_binding2.g.resources
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\Wpf_binding2.Properties.Resources.resources
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\Wpf_binding2.csproj.GenerateResource.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\Wpf_binding2.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\Wpf_binding2.exe
+D:\DESARROLLO_INTERFACES\CSHARP\WPF\Wpf_binding2\obj\Debug\Wpf_binding2.pdb
