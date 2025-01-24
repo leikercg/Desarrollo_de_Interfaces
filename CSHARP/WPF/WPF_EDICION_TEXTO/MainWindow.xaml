@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPF_EDICION_TEXTO.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_EDICION_TEXTO"
+        mc:Ignorable="d"
+  Title="MainWindow" Height="450" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnNegrita" Grid.Row="0" Content="Poner en negrita el texto seleccionado" 
+                Click="btnNegrita_Click" />
+        <Button x:Name="btnCursiva" Grid.Row="1" Content="Poner en cursiva el texto seleccionado"
+                Click="btnCursiva_Click"/>
+        <RichTextBox Grid.Row="2" AcceptsReturn="True" x:Name="zonaTexto" FontSize="20"/>
+
+    </Grid>
+
+</Window>

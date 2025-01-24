@@ -1,0 +1,15 @@
+D:\CSHARP\WPF\WPF_PruebasBinding\bin\Debug\WPF_PruebasBinding.exe.config
+D:\CSHARP\WPF\WPF_PruebasBinding\bin\Debug\WPF_PruebasBinding.exe
+D:\CSHARP\WPF\WPF_PruebasBinding\bin\Debug\WPF_PruebasBinding.pdb
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\WPF_PruebasBinding.csproj.AssemblyReference.cache
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\MainWindow.g.cs
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\App.g.cs
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\WPF_PruebasBinding_MarkupCompile.cache
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\WPF_PruebasBinding_MarkupCompile.lref
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\MainWindow.baml
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\WPF_PruebasBinding.g.resources
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\WPF_PruebasBinding.Properties.Resources.resources
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\WPF_PruebasBinding.csproj.GenerateResource.cache
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\WPF_PruebasBinding.csproj.CoreCompileInputs.cache
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\WPF_PruebasBinding.exe
+D:\CSHARP\WPF\WPF_PruebasBinding\obj\Debug\WPF_PruebasBinding.pdb
