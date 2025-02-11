@@ -1,0 +1,15 @@
+D:\CSHARP\WPF\WPF_RichTextBox\bin\Debug\WPF_RichTextBox.exe.config
+D:\CSHARP\WPF\WPF_RichTextBox\bin\Debug\WPF_RichTextBox.exe
+D:\CSHARP\WPF\WPF_RichTextBox\bin\Debug\WPF_RichTextBox.pdb
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\WPF_RichTextBox.csproj.AssemblyReference.cache
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\MainWindow.g.cs
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\App.g.cs
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\WPF_RichTextBox_MarkupCompile.cache
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\WPF_RichTextBox_MarkupCompile.lref
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\MainWindow.baml
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\WPF_RichTextBox.g.resources
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\WPF_RichTextBox.Properties.Resources.resources
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\WPF_RichTextBox.csproj.GenerateResource.cache
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\WPF_RichTextBox.csproj.CoreCompileInputs.cache
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\WPF_RichTextBox.exe
+D:\CSHARP\WPF\WPF_RichTextBox\obj\Debug\WPF_RichTextBox.pdb

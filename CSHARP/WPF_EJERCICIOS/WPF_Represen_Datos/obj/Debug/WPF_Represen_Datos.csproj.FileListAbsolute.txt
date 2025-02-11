@@ -1,0 +1,15 @@
+D:\CSHARP\WPF\WPF_Represen_Datos\bin\Debug\WPF_Represen_Datos.exe.config
+D:\CSHARP\WPF\WPF_Represen_Datos\bin\Debug\WPF_Represen_Datos.exe
+D:\CSHARP\WPF\WPF_Represen_Datos\bin\Debug\WPF_Represen_Datos.pdb
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\WPF_Represen_Datos.csproj.AssemblyReference.cache
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\MainWindow.g.cs
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\App.g.cs
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\WPF_Represen_Datos_MarkupCompile.cache
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\WPF_Represen_Datos_MarkupCompile.lref
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\MainWindow.baml
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\WPF_Represen_Datos.g.resources
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\WPF_Represen_Datos.Properties.Resources.resources
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\WPF_Represen_Datos.csproj.GenerateResource.cache
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\WPF_Represen_Datos.csproj.CoreCompileInputs.cache
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\WPF_Represen_Datos.exe
+D:\CSHARP\WPF\WPF_Represen_Datos\obj\Debug\WPF_Represen_Datos.pdb

@@ -1,0 +1,15 @@
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\bin\Debug\WPF_TreeView.exe.config
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\bin\Debug\WPF_TreeView.exe
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\bin\Debug\WPF_TreeView.pdb
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\WPF_TreeView.csproj.AssemblyReference.cache
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\MainWindow.g.cs
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\App.g.cs
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\WPF_TreeView_MarkupCompile.cache
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\WPF_TreeView_MarkupCompile.lref
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\MainWindow.baml
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\WPF_TreeView.g.resources
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\WPF_TreeView.Properties.Resources.resources
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\WPF_TreeView.csproj.GenerateResource.cache
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\WPF_TreeView.csproj.CoreCompileInputs.cache
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\WPF_TreeView.exe
+D:\CSHARP\WPF\CONTROLES_SELECCION\WPF_TreeView\obj\Debug\WPF_TreeView.pdb

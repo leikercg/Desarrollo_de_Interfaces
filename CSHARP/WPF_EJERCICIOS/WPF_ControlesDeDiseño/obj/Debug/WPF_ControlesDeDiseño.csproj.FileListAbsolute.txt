@@ -1,0 +1,15 @@
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\bin\Debug\WPF_ControlesDeDiseño.exe.config
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\bin\Debug\WPF_ControlesDeDiseño.exe
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\bin\Debug\WPF_ControlesDeDiseño.pdb
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\WPF_ControlesDeDiseño.csproj.AssemblyReference.cache
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\MainWindow.g.cs
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\App.g.cs
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\WPF_ControlesDeDiseño_MarkupCompile.cache
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\WPF_ControlesDeDiseño_MarkupCompile.lref
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\MainWindow.baml
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\WPF_ControlesDeDiseño.g.resources
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\WPF_ControlesDeDiseño.Properties.Resources.resources
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\WPF_ControlesDeDiseño.csproj.GenerateResource.cache
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\WPF_ControlesDeDiseño.csproj.CoreCompileInputs.cache
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\WPF_ControlesDeDiseño.exe
+D:\CSHARP\WPF\WPF_ControlesDeDiseño\obj\Debug\WPF_ControlesDeDiseño.pdb

@@ -1,0 +1,16 @@
+D:\CSHARP\WPF\WPF_ItemsControl\bin\Debug\WPF_ItemsControl.exe.config
+D:\CSHARP\WPF\WPF_ItemsControl\bin\Debug\WPF_ItemsControl.exe
+D:\CSHARP\WPF\WPF_ItemsControl\bin\Debug\WPF_ItemsControl.pdb
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\WPF_ItemsControl.csproj.AssemblyReference.cache
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\MainWindow.g.cs
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\App.g.cs
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\WPF_ItemsControl_MarkupCompile.cache
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\WPF_ItemsControl_MarkupCompile.lref
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\MainWindow.baml
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\WPF_ItemsControl.g.resources
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\WPF_ItemsControl.Properties.Resources.resources
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\WPF_ItemsControl.csproj.GenerateResource.cache
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\WPF_ItemsControl.csproj.CoreCompileInputs.cache
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\WPF_ItemsControl.exe
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\WPF_ItemsControl.pdb
+D:\CSHARP\WPF\WPF_ItemsControl\obj\Debug\GeneratedInternalTypeHelper.g.cs

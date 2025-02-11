@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPF_TreeView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_TreeView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TreeView>
+            <TreeViewItem Header="América">
+                <TreeViewItem Header="América del Norte">
+                    <TreeViewItem Header="Canadá"/>
+                    <TreeViewItem Header="Estados Unidos"/>
+                </TreeViewItem>
+                <TreeViewItem Header="América Central">
+                    <TreeViewItem Header="Méjico"/>
+                    <TreeViewItem Header="Panámá"/>
+                    <TreeViewItem Header="Honduras"/>
+                </TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Europa">
+                <TreeViewItem Header="Unión Europea">
+                    <TreeViewItem Header="Zona Euro">
+                        <TreeViewItem Header="España"/>
+                        <TreeViewItem Header="Francia"/>
+                        <TreeViewItem Header="Luxemburgo"/>
+                    </TreeViewItem>
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+D:\CSHARP\WPF\WPF_TextBox\bin\Debug\WPF_TextBox.exe.config
+D:\CSHARP\WPF\WPF_TextBox\bin\Debug\WPF_TextBox.exe
+D:\CSHARP\WPF\WPF_TextBox\bin\Debug\WPF_TextBox.pdb
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\WPF_TextBox.csproj.AssemblyReference.cache
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\MainWindow.g.cs
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\App.g.cs
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\WPF_TextBox_MarkupCompile.cache
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\WPF_TextBox_MarkupCompile.lref
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\MainWindow.baml
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\WPF_TextBox.g.resources
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\WPF_TextBox.Properties.Resources.resources
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\WPF_TextBox.csproj.GenerateResource.cache
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\WPF_TextBox.csproj.CoreCompileInputs.cache
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\WPF_TextBox.exe
+D:\CSHARP\WPF\WPF_TextBox\obj\Debug\WPF_TextBox.pdb

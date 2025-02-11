@@ -1,0 +1,15 @@
+D:\CSHARP\WPF\WPF_StatusBar\bin\Debug\WPF_StatusBar.exe.config
+D:\CSHARP\WPF\WPF_StatusBar\bin\Debug\WPF_StatusBar.exe
+D:\CSHARP\WPF\WPF_StatusBar\bin\Debug\WPF_StatusBar.pdb
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\WPF_StatusBar.csproj.AssemblyReference.cache
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\MainWindow.g.cs
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\App.g.cs
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\WPF_StatusBar_MarkupCompile.cache
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\WPF_StatusBar_MarkupCompile.lref
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\MainWindow.baml
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\WPF_StatusBar.g.resources
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\WPF_StatusBar.Properties.Resources.resources
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\WPF_StatusBar.csproj.GenerateResource.cache
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\WPF_StatusBar.csproj.CoreCompileInputs.cache
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\WPF_StatusBar.exe
+D:\CSHARP\WPF\WPF_StatusBar\obj\Debug\WPF_StatusBar.pdb

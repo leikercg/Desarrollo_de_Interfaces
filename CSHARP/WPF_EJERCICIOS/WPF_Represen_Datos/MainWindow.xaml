@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPF_Represen_Datos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Represen_Datos"
+        mc:Ignorable="d"
+        Title="Representación de datos" Height="400" Width="600">
+    <Grid>
+        <!-- Creo tres filas de la misma altura-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- En la primera fila aparece el título -->
+        <StackPanel Grid.Row="0" >
+            <TextBlock Text="Desarrollo con Visual Studio y C#" FontSize="30" 
+                       FontFamily="Segoe Print" TextAlignment="Center" Foreground="Orange"  />
+        </StackPanel>
+        <!-- En la segunda se pide el apellido-->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Height="25">
+            <Label Content="_Apellido: " Target="{Binding ElementName=tbApellido}" />
+            <TextBox x:Name="tbApellido" Width="150" />
+        </StackPanel>
+        <!-- En la tercera el nombre -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Height="25">
+            <Label Content="_Nombre: " Target="{Binding ElementName=tbNombre}" />
+            <TextBox x:Name="tbNombre" Width="150" />
+        </StackPanel>
+
+    </Grid>
+</Window>

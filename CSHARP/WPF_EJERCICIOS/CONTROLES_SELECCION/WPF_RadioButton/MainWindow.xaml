@@ -1,0 +1,38 @@
+﻿<Window x:Class="WPF_RadioButton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_RadioButton" 
+        xmlns:system="http://schemas.microsoft.com/winfx/2009/xaml"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical" Margin="40">
+            <RadioButton GroupName="Opción" Content="Dam 1 diurno" Margin="4"/>
+            <RadioButton GroupName="Opción" Content="Dam 2 diurno" Margin="4"/>
+            <RadioButton GroupName="Opción" Content="Dam 1 nocturno" Margin="4"/>
+            <RadioButton GroupName="Opción" Content="Dam 2 nocturno" Margin="4"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <CheckBox Content="Opción nº 1"/>
+            <CheckBox Content="Opción nº 2"/>
+            <CheckBox Content="Opción nº 3"/>
+            <CheckBox Content="Opción nº 4"/>
+        </StackPanel>
+        <!--
+        < Grid.Row="2">
+            
+            <system:String>Opción nº 1</system:String>
+            <system:String>Opción nº 2</system:String>
+            <system:String>Opción nº 3</system:String>
+            <system:String>Opción nº 4</system:String>
+        </>
+-->
+    </Grid>
+</Window>
