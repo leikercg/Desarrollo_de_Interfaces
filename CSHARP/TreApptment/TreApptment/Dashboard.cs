@@ -47,7 +47,7 @@ namespace Treapptment
                 while (reader.Read())
                 {
                     // Agregar todas las columnas al DataGridView
-                    dataGridViewPacientes.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(3));
+                    dataGridViewPacientes.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7));
                 }
 
                 reader.Close(); // Cerrar el lector después de usarlo

@@ -113,10 +113,12 @@ namespace Treapptment
             // Obtener el ID del paciente seleccionado
             textBoxIdInforme.Text = dataGridViewInformes.SelectedRows[0].Cells[0].Value.ToString();
             textBoxIdPaciente.Text = dataGridViewInformes.SelectedRows[0].Cells[1].Value.ToString();
-            textBoxMedico.Text = dataGridViewInformes.SelectedRows[0].Cells[2].Value.ToString();
-            textBoxCentro.Text = dataGridViewInformes.SelectedRows[0].Cells[3].Value.ToString();
-            textBoxMotivo.Text = dataGridViewInformes.SelectedRows[0].Cells[4].Value.ToString();
-            textBoxRecomendaciones.Text = dataGridViewInformes.SelectedRows[0].Cells[5].Value.ToString();
+            textBoxFechaCrea.Text= dataGridViewInformes.SelectedRows[0].Cells[2].Value.ToString();
+            textBoxFechaMod.Text= dataGridViewInformes.SelectedRows[0].Cells[3].Value.ToString();
+            textBoxMedico.Text = dataGridViewInformes.SelectedRows[0].Cells[4].Value.ToString();
+            textBoxCentro.Text = dataGridViewInformes.SelectedRows[0].Cells[5].Value.ToString();
+            textBoxMotivo.Text = dataGridViewInformes.SelectedRows[0].Cells[6].Value.ToString();
+            textBoxRecomendaciones.Text = dataGridViewInformes.SelectedRows[0].Cells[7].Value.ToString();
 
             
         
@@ -138,13 +140,15 @@ namespace Treapptment
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-
+            
             String informeId = textBoxIdInforme.Text;
             String idPaciente = textBoxIdPaciente.Text;
             String nombreMedico = textBoxMedico.Text;
             String centroMedico = textBoxCentro.Text;
             String motivo = textBoxMotivo.Text;
             String recomendaciones = textBoxRecomendaciones.Text;
+            String fechaCrea = textBoxFechaCrea.Text;
+            String fechaMod = textBoxFechaMod.Text;
 
             try
             {
@@ -155,7 +159,9 @@ namespace Treapptment
                 nombre_medico = @NombreMedico,
                 centro_medico = @CentroMedico,
                 motivo = @Motivo,
-                recomendaciones = @Recomendaciones
+                recomendaciones = @Recomendaciones,
+                fecha_creacion = @FechaCrea,
+                fecha_modificacion = @FechaMod
                 WHERE id_informe = @InformeId";
                 SqlCommand command = new SqlCommand(sql, connection);
 
@@ -170,6 +176,10 @@ namespace Treapptment
                 command.Parameters.AddWithValue("@CentroMedico", centroMedico);
                 command.Parameters.AddWithValue("@Motivo", motivo);
                 command.Parameters.AddWithValue("@Recomendaciones", recomendaciones);
+                command.Parameters.AddWithValue("@FechaCrea", fechaCrea);
+                command.Parameters.AddWithValue("@FechaMod", fechaMod);
+
+
 
                 int filasAfectadas = command.ExecuteNonQuery();
                 if (filasAfectadas > 0)
@@ -188,7 +198,7 @@ namespace Treapptment
             }
             finally
             {
-
+                limpiar();
                 connection.Close();
 
             }
@@ -197,67 +207,60 @@ namespace Treapptment
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Validación para que ningún campo esté vacío
-            /*if (string.IsNullOrWhiteSpace(textBoxIdInforme.Text) ||
-                string.IsNullOrWhiteSpace(textBoxIdPaciente.Text))
-            {
-                MessageBox.Show("Los campos nombre deben estar llenos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Detiene la ejecución del método si hay campos vacíos
-            }*/
-
-            String informeId = textBoxIdInforme.Text;
             String idPaciente = textBoxIdPaciente.Text;
             String nombreMedico = textBoxMedico.Text;
             String centroMedico = textBoxCentro.Text;
             String motivo = textBoxMotivo.Text;
             String recomendaciones = textBoxRecomendaciones.Text;
+            String fechaCrea = textBoxFechaCrea.Text;
+            String fechaMod = textBoxFechaMod.Text;
 
             try
             {
                 connection.Open();
 
-                string sql = @"UPDATE Informes SET 
-                id_paciente = @IdPaciente,
-                nombre_medico = @NombreMedico,
-                centro_medico = @CentroMedico,
-                motivo = @Motivo,
-                recomendaciones = @Recomendaciones
-                WHERE id_informe = @InformeId";
+                // Consulta SQL para crear un nuevo informe
+                string sql = @"INSERT INTO Informes 
+                       (id_paciente, nombre_medico, centro_medico, motivo, recomendaciones, fecha_creacion, fecha_modificacion)
+                       VALUES
+                       (@IdPaciente, @NombreMedico, @CentroMedico, @Motivo, @Recomendaciones, @FechaCrea, @FechaMod)";
+
                 SqlCommand command = new SqlCommand(sql, connection);
 
-
-
-
-                command.Connection = connection;
-                command.CommandText = sql;
-                command.Parameters.AddWithValue("@InformeId", informeId);
+                // Agregar parámetros a la consulta
                 command.Parameters.AddWithValue("@IdPaciente", idPaciente);
                 command.Parameters.AddWithValue("@NombreMedico", nombreMedico);
                 command.Parameters.AddWithValue("@CentroMedico", centroMedico);
                 command.Parameters.AddWithValue("@Motivo", motivo);
                 command.Parameters.AddWithValue("@Recomendaciones", recomendaciones);
+                command.Parameters.AddWithValue("@FechaCrea", fechaCrea);  // Usar la fecha proporcionada
+                command.Parameters.AddWithValue("@FechaMod", fechaMod);    // Usar la fecha proporcionada
 
+                // Ejecutar el comando
                 int filasAfectadas = command.ExecuteNonQuery();
+
+                // Verificar si se insertó un nuevo informe
                 if (filasAfectadas > 0)
                 {
-                    MessageBox.Show("Informe actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Informe creado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarInformes();
                 }
                 else
                 {
-                    MessageBox.Show("No se encontró el informe a actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No se pudo crear el informe", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al actualizar informe: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al crear el informe: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-
+                limpiar();
                 connection.Close();
-
             }
         }
+
 
         private void dataGridViewInformes_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -270,6 +273,20 @@ namespace Treapptment
                     dataGridViewInformes.Rows[e.RowIndex].Selected = true;
                 }
             }
+
+        }
+
+        private void limpiar()
+        {
+            // Obtener el ID del paciente seleccionado
+            textBoxIdInforme.Text = "";
+            textBoxIdPaciente.Text = _idPaciente.ToString();
+            textBoxFechaCrea.Text = "";
+            textBoxFechaMod.Text = "";
+            textBoxMedico.Text = "";
+            textBoxCentro.Text = "";
+            textBoxMotivo.Text = "";
+            textBoxRecomendaciones.Text = "";
 
         }
     }
