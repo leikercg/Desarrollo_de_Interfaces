@@ -8,3 +8,13 @@ D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.csproj.GenerateReso
 D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.csproj.CoreCompileInputs.cache
 D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.exe
 D:\CSHARP\BBDD\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.pdb
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\bin\Debug\WF_BD_Estudiantes.exe.config
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\bin\Debug\WF_BD_Estudiantes.exe
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\bin\Debug\WF_BD_Estudiantes.pdb
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.csproj.AssemblyReference.cache
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.Form1.resources
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.Properties.Resources.resources
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.csproj.GenerateResource.cache
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.csproj.CoreCompileInputs.cache
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.exe
+D:\DESARROLLO_DE_INTERFACES\CSHARP\WF_BD_Estudiantes\obj\Debug\WF_BD_Estudiantes.pdb
