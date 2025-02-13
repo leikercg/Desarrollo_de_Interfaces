@@ -23,6 +23,7 @@ namespace Treapptment
 
             // Rellenar los campos con los datos actuales del paciente
             pacienteId = id;
+            textBoxPacienteId.Text = id.ToString();
             textBoxNombre.Text = nombre;
             textBoxCalle.Text = calle;
             textBoxCiudad.Text = ciudad;
@@ -46,15 +47,38 @@ namespace Treapptment
                 string sql = "UPDATE Pacientes SET nombre = @Nombre, calle = @Calle, ciudad = @Ciudad, cod_postal = @CodPostal, telefono1 = @Telefono1, telefono2 = @Telefono2, telefono3 = @Telefono3 WHERE id_paciente = @PacienteId";
                 SqlCommand command = new SqlCommand(sql, connection);
 
-                // Asignar los parámetros del SQL con los valores de los controles del formulario
-                command.Parameters.AddWithValue("@PacienteId", pacienteId);
-                command.Parameters.AddWithValue("@Nombre", textBoxNombre.Text);
-                command.Parameters.AddWithValue("@Calle", textBoxCalle.Text);
-                command.Parameters.AddWithValue("@Ciudad", textBoxCiudad.Text);
-                command.Parameters.AddWithValue("@CodPostal", textBoxCodigoPostal.Text);
-                command.Parameters.AddWithValue("@Telefono1", textBoxTelefono1.Text);
-                command.Parameters.AddWithValue("@Telefono2", textBoxTelefono2.Text);
-                command.Parameters.AddWithValue("@Telefono3", textBoxTelefono3.Text);
+                // Verificar que no se borra el nombre ni la calle
+
+                string nombre = textBoxNombre.Text.Trim();
+                string calle = textBoxCalle.Text.Trim();
+                string ciudad = textBoxCiudad.Text.Trim();
+                string codPostal = textBoxCodigoPostal.Text.Trim();
+                string telefono1 = textBoxTelefono1.Text.Trim();
+                string telefono2 = textBoxTelefono2.Text.Trim();
+                string telefono3 = textBoxTelefono3.Text.Trim();
+
+
+                if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(calle)) // Si no se cumple esto devolver sin hacer nada.
+                {
+                    MessageBox.Show("El nombre y la calle son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(ciudad)) // Marcar Zaragoza si la ciudad esta en blanco
+                {
+                    ciudad = "Zaragoza";
+                }
+
+
+                    // Asignar los parámetros del SQL con los valores de los controles del formulario
+                    command.Parameters.AddWithValue("@PacienteId", pacienteId);
+                command.Parameters.AddWithValue("@Nombre", nombre);
+                command.Parameters.AddWithValue("@Calle", calle);
+                command.Parameters.AddWithValue("@Ciudad", ciudad);
+                command.Parameters.AddWithValue("@CodPostal", codPostal);
+                command.Parameters.AddWithValue("@Telefono1", telefono1);
+                command.Parameters.AddWithValue("@Telefono2", telefono2);
+                command.Parameters.AddWithValue("@Telefono3", telefono3);
 
                 // Ejecutar la consulta
                 int rowsAffected = command.ExecuteNonQuery();

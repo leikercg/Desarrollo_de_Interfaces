@@ -46,16 +46,17 @@
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPacientes)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonCerrarSesion
             // 
-            this.buttonCerrarSesion.Location = new System.Drawing.Point(146, 278);
-            this.buttonCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCerrarSesion.Location = new System.Drawing.Point(651, 295);
+            this.buttonCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCerrarSesion.Name = "buttonCerrarSesion";
-            this.buttonCerrarSesion.Size = new System.Drawing.Size(83, 20);
+            this.buttonCerrarSesion.Size = new System.Drawing.Size(100, 30);
             this.buttonCerrarSesion.TabIndex = 0;
             this.buttonCerrarSesion.Text = "Cerrar Sesión";
             this.buttonCerrarSesion.UseVisualStyleBackColor = true;
@@ -63,10 +64,10 @@
             // 
             // buttonAgregarPaciente
             // 
-            this.buttonAgregarPaciente.Location = new System.Drawing.Point(19, 275);
-            this.buttonAgregarPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAgregarPaciente.Location = new System.Drawing.Point(57, 295);
+            this.buttonAgregarPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAgregarPaciente.Name = "buttonAgregarPaciente";
-            this.buttonAgregarPaciente.Size = new System.Drawing.Size(112, 23);
+            this.buttonAgregarPaciente.Size = new System.Drawing.Size(100, 30);
             this.buttonAgregarPaciente.TabIndex = 1;
             this.buttonAgregarPaciente.Text = "Agregar Paciente";
             this.buttonAgregarPaciente.UseVisualStyleBackColor = true;
@@ -74,18 +75,18 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(193, 36);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Location = new System.Drawing.Point(327, 47);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(254, 20);
             this.textBoxNombre.TabIndex = 2;
             // 
             // buttonBuscarPaciente
             // 
-            this.buttonBuscarPaciente.Location = new System.Drawing.Point(462, 36);
-            this.buttonBuscarPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarPaciente.Location = new System.Drawing.Point(585, 41);
+            this.buttonBuscarPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscarPaciente.Name = "buttonBuscarPaciente";
-            this.buttonBuscarPaciente.Size = new System.Drawing.Size(129, 19);
+            this.buttonBuscarPaciente.Size = new System.Drawing.Size(100, 30);
             this.buttonBuscarPaciente.TabIndex = 3;
             this.buttonBuscarPaciente.Text = "Buscar Nombre";
             this.buttonBuscarPaciente.UseVisualStyleBackColor = true;
@@ -106,7 +107,7 @@
             this.Telefono3});
             this.dataGridViewPacientes.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewPacientes.Location = new System.Drawing.Point(57, 85);
-            this.dataGridViewPacientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewPacientes.Name = "dataGridViewPacientes";
             this.dataGridViewPacientes.ReadOnly = true;
             this.dataGridViewPacientes.RowHeadersWidth = 51;
@@ -206,28 +207,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 39);
+            this.label1.Location = new System.Drawing.Point(131, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.Size = new System.Drawing.Size(192, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Introduce el nombre:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Introduce el nombre o parte del nombre";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(131, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(314, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Para mostrar todos los pacientes realiza una búsqueda en blanco";
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 366);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewPacientes);
             this.Controls.Add(this.buttonBuscarPaciente);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.buttonAgregarPaciente);
             this.Controls.Add(this.buttonCerrarSesion);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
-            this.Text = "Form2";
+            this.Text = "Escritorio";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPacientes)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -254,5 +264,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -17,16 +17,20 @@ namespace Treapptment
             _idInforme = idInforme;
             CargarTratamientos();
             CargarMedicamentos();
+
+            // Bloqueamos unos textos y botones al cargar la página
             textBoxIdTratamiento.Enabled = false;
             textBoxIdInforme.Text = _idInforme.ToString();
             textBoxIdInforme.Enabled = false;
+
+            buttonEditar.Enabled = false;
         }
 
         private void CargarTratamientos()
         {
             connection = new SqlConnection(_cadenaDeConexion);
-            string sql = @"SELECT lt.id_tratamiento, lt.frecuencia_horas, lt.duracion_dias, 
-                                  m.id_medicamento, m.precio, m.descuento
+            string sql = @"SELECT lt.id_tratamiento, m.nombre, m.id_medicamento, lt.frecuencia_horas, lt.duracion_dias, 
+                                 m.precio, m.descuento
                            FROM Linea_Tratamiento lt
                            LEFT JOIN Medicamentos m ON lt.id_medicamento = m.id_medicamento
                            WHERE lt.id_informe = @IdInforme";
@@ -40,7 +44,16 @@ namespace Treapptment
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
-                dataGridViewTratamientos.DataSource = dataTable;
+                dataGridViewTratamientos.DataSource = dataTable; // Rellena el data grid de manera dinámica, sin tener que indicar numero de columnas en diseño
+
+                // Cambiar nombres de columnas en el DataGridView, ya que de la manera anterior le da el nombre de la columna de la base de datos
+                dataGridViewTratamientos.Columns["id_tratamiento"].HeaderText = "ID Tratamiento";
+                dataGridViewTratamientos.Columns["nombre"].HeaderText = "Nombre del Medicamento";
+                dataGridViewTratamientos.Columns["frecuencia_horas"].HeaderText = "Cada (horas)";
+                dataGridViewTratamientos.Columns["Duracion_dias"].HeaderText = "Duración (días)";
+                dataGridViewTratamientos.Columns["Precio"].HeaderText = "Precio por unidad(€)";
+                dataGridViewTratamientos.Columns["Descuento"].HeaderText = "Descuento por unidad (€)";
+
             }
             catch (Exception ex)
             {
@@ -54,23 +67,21 @@ namespace Treapptment
 
         private void CargarMedicamentos()
         {
-//            string cadenaDeConexion = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Treapptment;Integrated Security=True;";
-
-            using (SqlConnection connection = new SqlConnection(_cadenaDeConexion))
-            {
-                string sql = "SELECT id_medicamento, precio FROM Medicamentos"; // Ajusta según los datos que quieras mostrar
+            SqlConnection connection = new SqlConnection(_cadenaDeConexion);
+            
+                string sql = "SELECT id_medicamento, nombre, precio FROM Medicamentos"; // Ajusta según los datos que quieras mostrar
 
                 try
                 {
                     connection.Open();
                     SqlCommand command = new SqlCommand(sql, connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command); // objeto que recoje los datos de una consulta y los rellena en otro
+                    DataTable dataTable = new DataTable(); // rellena una data table
+                    adapter.Fill(dataTable); // rellenar
 
                     // Asignamos los valores al ComboBox
-                    comboBoxMedicamentos.DataSource = dataTable;
-                    comboBoxMedicamentos.DisplayMember = "id_medicamento";  // Lo que se verá en el ComboBox
+                    comboBoxMedicamentos.DataSource = dataTable; // Extrae los valores de la date table
+                    comboBoxMedicamentos.DisplayMember = "nombre";  // Lo que se verá en el ComboBox
                     comboBoxMedicamentos.ValueMember = "id_medicamento"; // El valor real de cada opción
 
                     // Suscribimos el evento SelectedIndexChanged
@@ -81,26 +92,22 @@ namespace Treapptment
                 {
                     MessageBox.Show($"Error al cargar medicamentos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-        }
-        private void comboBoxMedicamentos_SelectedIndexChanged(object sender, EventArgs e)
+            connection.Close();
+         }
+        private void comboBoxMedicamentos_SelectedIndexChanged(object sender, EventArgs e) // Evento que maneja que hacer al ser seleccionado un item del combo
         {
             if (comboBoxMedicamentos.SelectedItem != null)
             {
                 // Obtener el id del medicamento seleccionado
-                int idMedicamento = Convert.ToInt32(((DataRowView)comboBoxMedicamentos.SelectedItem)["id_medicamento"]);
+                int idMedicamento = Convert.ToInt32(((DataRowView)comboBoxMedicamentos.SelectedItem)["id_medicamento"]); // Seleccionar esa columna del combo asociado a la datatable
 
                 // Establecer el valor del TextBox
                 textBoxMedicamento.Text = idMedicamento.ToString();  // Si deseas mostrar el precio en formato moneda
             }
         }
 
-            private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void dataGridViewTratamientos_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridViewTratamientos_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) // Detectar que boton y fila ha sido pulsada
         {
 
             if (e.Button == MouseButtons.Right) // Si el botón clickeado es el derecho
@@ -116,26 +123,20 @@ namespace Treapptment
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Obtener el ID del informe seleccionado (supuesto que el ID está en la primera columna)
-            int tratamientoId = (int)dataGridViewTratamientos.SelectedRows[0].Cells[0].Value;
+            int tratamientoId = (int)dataGridViewTratamientos.SelectedRows[0].Cells[0].Value; // Ya que está en la primera columna
 
 
-            // Conectar con la base de datos
             try
             {
                 connection.Open();
-
-                // Crear el comando SQL para eliminar
                 string sql = "DELETE FROM linea_tratamiento WHERE id_tratamiento = @TratamientoId";
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.Parameters.AddWithValue("@TratamientoId", tratamientoId);
-
-                // Ejecutar la consulta
                 int rowsAffected = command.ExecuteNonQuery();
+
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Tratamiento eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Recargar la lista de pacientes después de la eliminación
                     CargarTratamientos();
                 }
                 else
@@ -153,28 +154,28 @@ namespace Treapptment
             }
         }
 
-        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e) // Opción del menú contextual editar
         {
-
-            // Obtener el ID del paciente seleccionado
+            // Rellena los campos del formulario con los datos de la fila a editar
             textBoxIdTratamiento.Text = dataGridViewTratamientos.SelectedRows[0].Cells[0].Value.ToString();
-            textBoxMedicamento.Text = dataGridViewTratamientos.SelectedRows[0].Cells[3].Value.ToString();
-            textBoxFrecuencia.Text = dataGridViewTratamientos.SelectedRows[0].Cells[1].Value.ToString();
-            textBoxDuracion.Text = dataGridViewTratamientos.SelectedRows[0].Cells[2].Value.ToString();
+            textBoxMedicamento.Text = dataGridViewTratamientos.SelectedRows[0].Cells[2].Value.ToString();
+            textBoxFrecuencia.Text = dataGridViewTratamientos.SelectedRows[0].Cells[3].Value.ToString();
+            textBoxDuracion.Text = dataGridViewTratamientos.SelectedRows[0].Cells[4].Value.ToString();
+
+            buttonEditar.Enabled = true; // Lo habilitamos para poder editar
+            buttonGuardar.Enabled = false; // para no guardar como otra fila la que estamos editando
         }
 
-        private void limpiar()
+        private void limpiar() // Vacía los campos del formulario
         {
-            // Obtener el ID del paciente seleccionado
             textBoxIdInforme.Text = _idInforme.ToString();
             textBoxIdTratamiento.Text = "";
             textBoxMedicamento.Text = "";
             textBoxFrecuencia.Text = "";
             textBoxDuracion.Text = "";
- 
         }
 
-        private void buttonGuardar_Click(object sender, EventArgs e)
+        private void buttonGuardar_Click(object sender, EventArgs e) // Almacena en la base de datos los campos del formulario
         {
             String idTratamiento = textBoxIdTratamiento.Text;
             String idInforme = _idInforme.ToString();
@@ -186,31 +187,23 @@ namespace Treapptment
             try
             {
                 connection.Open();
-
-                // Consulta SQL para crear un nuevo informe
                 string sql = @"INSERT INTO linea_tratamiento 
                        (id_informe, id_medicamento, frecuencia_horas, duracion_dias)
                        VALUES
                        (@IdInforme, @medicamento, @frecuencia, @duracion)";
 
                 SqlCommand command = new SqlCommand(sql, connection);
-
-                // Agregar parámetros a la consulta
                 command.Parameters.AddWithValue("@IdInforme", idInforme);
                 command.Parameters.AddWithValue("@medicamento", medicamento);
                 command.Parameters.AddWithValue("@CentroMedico", medicamento);
                 command.Parameters.AddWithValue("@frecuencia", frecuencia);
                 command.Parameters.AddWithValue("@duracion", duracion);
 
-
-                // Ejecutar el comando
                 int filasAfectadas = command.ExecuteNonQuery();
 
-                // Verificar si se insertó un nuevo informe
                 if (filasAfectadas > 0)
                 {
                     MessageBox.Show("Tratamiento creado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   // CargarInformes();
                 }
                 else
                 {
@@ -223,9 +216,72 @@ namespace Treapptment
             }
             finally
             {
-                limpiar();
-                CargarTratamientos();
+                limpiar(); // limpiamos formulario
+                CargarTratamientos(); // Refrescamos los datos
                 connection.Close();
+            }
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            // Recogemos los valores de los campos
+            String idTratamiento = textBoxIdTratamiento.Text;
+            String idMedicamento = textBoxMedicamento.Text;
+            String frecuencia = textBoxFrecuencia.Text;
+            String duracion = textBoxDuracion.Text;
+
+            if (string.IsNullOrEmpty(idMedicamento) || string.IsNullOrEmpty(frecuencia) || string.IsNullOrEmpty(duracion))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detiene la ejecución del método
+            }
+           
+         
+
+            // Asignar la fecha de modificación con la fecha actual
+            string fechaMod = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); // Para usar la fecha de la edición
+            try
+            {
+                connection.Open();
+
+                string sql = @"UPDATE linea_tratamiento SET 
+                id_medicamento = @IdMedicamento,
+                frecuencia_horas = @Frecuencia,
+                duracion_dias = @Duracion
+                WHERE id_tratamiento = @TratamientoID";
+
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Connection = connection;
+                command.CommandText = sql;
+                command.Parameters.AddWithValue("@TratamientoID", idTratamiento);
+                command.Parameters.AddWithValue("@Duracion", duracion);
+                command.Parameters.AddWithValue("@Frecuencia", frecuencia);
+                command.Parameters.AddWithValue("@IdMedicamento", idMedicamento);
+        
+
+                int filasAfectadas = command.ExecuteNonQuery();
+                if (filasAfectadas > 0)
+                {
+                    MessageBox.Show("Informe actualizado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarTratamientos();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el informe a actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al actualizar informe: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                buttonGuardar.Enabled = true; // habilitamos de nuevo el boton de guardar
+                buttonEditar.Enabled = false;
+                limpiar(); // Limpia los campos
+                connection.Close();
+
             }
         }
     }

@@ -17,12 +17,18 @@ namespace Treapptment
             _idPaciente = idPaciente;
             CargarInformes();
 
+            // Bloqueamos unos textos y botones
             textBoxIdInforme.Enabled = false;
             textBoxIdPaciente.Text = _idPaciente.ToString();
             textBoxIdPaciente.Enabled = false;
+            textBoxFechaCrea.Enabled = false;
+            textBoxFechaMod.Enabled = false;
+            buttonEditar.Enabled = false;
+
+
         }
 
-        private void CargarInformes()
+        private void CargarInformes() // Cargar los informes en el datagrid
         {
             connection = new SqlConnection(_cadenaDeConexion);
             string sql = "SELECT * FROM Informes WHERE id_paciente = @IdPaciente";
@@ -36,7 +42,7 @@ namespace Treapptment
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
-                dataGridViewInformes.DataSource = dataTable;
+                dataGridViewInformes.DataSource = dataTable; // Rellena el data grid de manera dinámica, sin tener que indicar numero de columnas en diseño
             }
             catch (Exception ex)
             {
@@ -48,7 +54,7 @@ namespace Treapptment
             }
         }
 
-        private void dataGridViewInformes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewInformes_CellDoubleClick(object sender, DataGridViewCellEventArgs e) // Para abrir la ventana relacionada con el informe
         {
             if (e.RowIndex >= 0) // Verifica que se haya hecho clic en una fila válida
             {
@@ -61,23 +67,15 @@ namespace Treapptment
 
         }
 
-        private void FormularioInformes_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Obtener el ID del informe seleccionado (supuesto que el ID está en la primera columna)
-            int informeId = (int)dataGridViewInformes.SelectedRows[0].Cells[0].Value;
+            // ID del informe seleccionado
+            int informeId = (int)dataGridViewInformes.SelectedRows[0].Cells[0].Value; // Ya que está en primera columna
 
-
-            // Conectar con la base de datos
             try
             {
                 connection.Open();
 
-                // Crear el comando SQL para eliminar
                 string sql = "DELETE FROM informes WHERE id_informe = @InformeId";
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.Parameters.AddWithValue("@InformeId", informeId);
@@ -87,7 +85,6 @@ namespace Treapptment
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Informe eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Recargar la lista de pacientes después de la eliminación
                     CargarInformes();
                 }
                 else
@@ -105,12 +102,9 @@ namespace Treapptment
             }
 
         }
-
-        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e) // Opción de editar en el menu contextual
         {
-
-
-            // Obtener el ID del paciente seleccionado
+            // Rellenamos los campos con la fina a editar
             textBoxIdInforme.Text = dataGridViewInformes.SelectedRows[0].Cells[0].Value.ToString();
             textBoxIdPaciente.Text = dataGridViewInformes.SelectedRows[0].Cells[1].Value.ToString();
             textBoxFechaCrea.Text= dataGridViewInformes.SelectedRows[0].Cells[2].Value.ToString();
@@ -120,36 +114,40 @@ namespace Treapptment
             textBoxMotivo.Text = dataGridViewInformes.SelectedRows[0].Cells[6].Value.ToString();
             textBoxRecomendaciones.Text = dataGridViewInformes.SelectedRows[0].Cells[7].Value.ToString();
 
-            
+            buttonEditar.Enabled = true; // Lo habilitamos para poder editar
+            buttonGuardar.Enabled = false; // para no guardar como otra fila la que estamos editando
         
-    }
+        }
       
 
-        private void dataGridViewInformes_CellMouseDown_1(object sender, DataGridViewCellMouseEventArgs e)
+       
+        private void buttonEditar_Click(object sender, EventArgs e) // Edita en la base de datos
         {
-            if (e.Button == MouseButtons.Right) // Si el botón clickeado es el derecho
-            {
-                if (e.RowIndex >= 0) // Verificamos si se hace clic sobre una fila válida
-                {
-                    // Seleccionar la fila clickeada
-                    dataGridViewInformes.ClearSelection();
-                    dataGridViewInformes.Rows[e.RowIndex].Selected = true;
-                }
-            }
-        }
-
-        private void buttonEditar_Click(object sender, EventArgs e)
-        {
-            
+            // Recogemos los valores de los campos
             String informeId = textBoxIdInforme.Text;
             String idPaciente = textBoxIdPaciente.Text;
             String nombreMedico = textBoxMedico.Text;
             String centroMedico = textBoxCentro.Text;
             String motivo = textBoxMotivo.Text;
             String recomendaciones = textBoxRecomendaciones.Text;
-            String fechaCrea = textBoxFechaCrea.Text;
-            String fechaMod = textBoxFechaMod.Text;
 
+            if (string.IsNullOrEmpty(nombreMedico))
+            {
+                nombreMedico = "Dr. Leiker"; // Para valor por defecto
+            }
+            if (string.IsNullOrEmpty(centroMedico))
+            {
+                centroMedico = "Palafox"; // Para valor por defecto
+            }
+            // Si no está el motivo de la visita 
+            if (string.IsNullOrWhiteSpace(motivo))
+            {
+                MessageBox.Show("El motivo no puede estar vacío.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detiene la ejecución del método
+            }
+
+            // Asignar la fecha de modificación con la fecha actual
+            string fechaMod = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); // Para usar la fecha de la edición
             try
             {
                 connection.Open();
@@ -160,14 +158,11 @@ namespace Treapptment
                 centro_medico = @CentroMedico,
                 motivo = @Motivo,
                 recomendaciones = @Recomendaciones,
-                fecha_creacion = @FechaCrea,
                 fecha_modificacion = @FechaMod
                 WHERE id_informe = @InformeId";
+
+
                 SqlCommand command = new SqlCommand(sql, connection);
-
-
-
-
                 command.Connection = connection;
                 command.CommandText = sql;
                 command.Parameters.AddWithValue("@InformeId", informeId);
@@ -176,10 +171,8 @@ namespace Treapptment
                 command.Parameters.AddWithValue("@CentroMedico", centroMedico);
                 command.Parameters.AddWithValue("@Motivo", motivo);
                 command.Parameters.AddWithValue("@Recomendaciones", recomendaciones);
-                command.Parameters.AddWithValue("@FechaCrea", fechaCrea);
+                //command.Parameters.AddWithValue("@FechaCrea", fechaCrea);
                 command.Parameters.AddWithValue("@FechaMod", fechaMod);
-
-
 
                 int filasAfectadas = command.ExecuteNonQuery();
                 if (filasAfectadas > 0)
@@ -198,7 +191,9 @@ namespace Treapptment
             }
             finally
             {
-                limpiar();
+                buttonGuardar.Enabled = true; // habilitamos de nuevo el boton de guardar
+                buttonEditar.Enabled = false;
+                limpiar(); // Limpia los campos
                 connection.Close();
 
             }
@@ -207,13 +202,29 @@ namespace Treapptment
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            // Recogemos los valores de los campos
             String idPaciente = textBoxIdPaciente.Text;
             String nombreMedico = textBoxMedico.Text;
             String centroMedico = textBoxCentro.Text;
             String motivo = textBoxMotivo.Text;
             String recomendaciones = textBoxRecomendaciones.Text;
-            String fechaCrea = textBoxFechaCrea.Text;
-            String fechaMod = textBoxFechaMod.Text;
+
+            if (string.IsNullOrEmpty(nombreMedico))
+            {
+                nombreMedico = "Dr. Leiker"; // Para valor por defecto
+            }
+            if (string.IsNullOrEmpty(centroMedico))
+            {
+                centroMedico = "Palafox"; // Para valor por defecto
+            }
+
+            // Si no está el motivo de la visita 
+            if (string.IsNullOrWhiteSpace(motivo))
+            {
+                MessageBox.Show("El motivo no puede estar vacío.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detiene la ejecución del método
+            }
 
             try
             {
@@ -221,9 +232,9 @@ namespace Treapptment
 
                 // Consulta SQL para crear un nuevo informe
                 string sql = @"INSERT INTO Informes 
-                       (id_paciente, nombre_medico, centro_medico, motivo, recomendaciones, fecha_creacion, fecha_modificacion)
+                       (id_paciente, nombre_medico, centro_medico, motivo, recomendaciones)
                        VALUES
-                       (@IdPaciente, @NombreMedico, @CentroMedico, @Motivo, @Recomendaciones, @FechaCrea, @FechaMod)";
+                       (@IdPaciente, @NombreMedico, @CentroMedico, @Motivo, @Recomendaciones)";
 
                 SqlCommand command = new SqlCommand(sql, connection);
 
@@ -233,9 +244,8 @@ namespace Treapptment
                 command.Parameters.AddWithValue("@CentroMedico", centroMedico);
                 command.Parameters.AddWithValue("@Motivo", motivo);
                 command.Parameters.AddWithValue("@Recomendaciones", recomendaciones);
-                command.Parameters.AddWithValue("@FechaCrea", fechaCrea);  // Usar la fecha proporcionada
-                command.Parameters.AddWithValue("@FechaMod", fechaMod);    // Usar la fecha proporcionada
 
+              
                 // Ejecutar el comando
                 int filasAfectadas = command.ExecuteNonQuery();
 
@@ -262,7 +272,7 @@ namespace Treapptment
         }
 
 
-        private void dataGridViewInformes_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridViewInformes_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) // Detectar que boton es pulsado para el menú contextual
         {
             if (e.Button == MouseButtons.Right) // Si el botón clickeado es el derecho
             {
@@ -276,9 +286,8 @@ namespace Treapptment
 
         }
 
-        private void limpiar()
+        private void limpiar() // Para limpiar los campos
         {
-            // Obtener el ID del paciente seleccionado
             textBoxIdInforme.Text = "";
             textBoxIdPaciente.Text = _idPaciente.ToString();
             textBoxFechaCrea.Text = "";
@@ -289,5 +298,7 @@ namespace Treapptment
             textBoxRecomendaciones.Text = "";
 
         }
+
+
     }
 }

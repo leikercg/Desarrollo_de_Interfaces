@@ -17,8 +17,7 @@ namespace Treapptment
             _dashboard = dashboard;
         }
 
-        // Evento para agregar el paciente
-            private void buttonGuardar_Click(object sender, EventArgs e)
+            private void buttonGuardar_Click(object sender, EventArgs e) // Agregar paciente
         {
             connection = new SqlConnection(cadenaDeConexion);
 
@@ -30,20 +29,26 @@ namespace Treapptment
             string telefono2 = textBoxTelefono2.Text.Trim();
             string telefono3 = textBoxTelefono3.Text.Trim();
 
-            // Validaciones básicas
-            if (string.IsNullOrEmpty(nombre))
+           
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(calle)) // Si no se cumple esto devolver sin hacer nada.
             {
-                MessageBox.Show("El nombre es obligatorio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El nombre y la calle son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            if (string.IsNullOrEmpty(ciudad)) // Marcar Zaragoza si la ciudad esta en blanco
+            {
+                ciudad = "Zaragoza";
+
+            }
+    
             string sql = @"INSERT INTO Pacientes (nombre, calle, ciudad, cod_postal, telefono1, telefono2, telefono3) 
                              VALUES (@Nombre, @Calle, @Ciudad, @CodPostal, @Telefono1, @Telefono2, @Telefono3)";
 
 
             try
             {
-                connection.Open(); // Abre la conexión antes de ejecutar la consulta
+                connection.Open(); // Abrimos conexion
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 
                     cmd.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar, 100).Value = nombre;
@@ -85,6 +90,5 @@ namespace Treapptment
             }
         }
 
- 
     }
 }
