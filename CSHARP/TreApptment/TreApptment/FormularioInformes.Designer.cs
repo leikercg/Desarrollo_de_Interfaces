@@ -52,6 +52,7 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInformes)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -177,7 +178,7 @@
             this.textBoxMedico.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMedico.Name = "textBoxMedico";
             this.textBoxMedico.Size = new System.Drawing.Size(190, 20);
-            this.textBoxMedico.TabIndex = 33;
+            this.textBoxMedico.TabIndex = 1;
             // 
             // textBoxCentro
             // 
@@ -185,7 +186,7 @@
             this.textBoxCentro.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCentro.Name = "textBoxCentro";
             this.textBoxCentro.Size = new System.Drawing.Size(190, 20);
-            this.textBoxCentro.TabIndex = 32;
+            this.textBoxCentro.TabIndex = 2;
             // 
             // textBoxMotivo
             // 
@@ -193,7 +194,7 @@
             this.textBoxMotivo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMotivo.Name = "textBoxMotivo";
             this.textBoxMotivo.Size = new System.Drawing.Size(190, 20);
-            this.textBoxMotivo.TabIndex = 31;
+            this.textBoxMotivo.TabIndex = 3;
             // 
             // textBoxIdInforme
             // 
@@ -237,7 +238,7 @@
             this.textBoxRecomendaciones.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRecomendaciones.Name = "textBoxRecomendaciones";
             this.textBoxRecomendaciones.Size = new System.Drawing.Size(190, 20);
-            this.textBoxRecomendaciones.TabIndex = 44;
+            this.textBoxRecomendaciones.TabIndex = 4;
             // 
             // buttonEditar
             // 
@@ -270,11 +271,23 @@
             this.label9.TabIndex = 50;
             this.label9.Text = "Por defecto médico: Dr. Leiker. Por defecto centro: Palafox.";
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(837, 43);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(100, 30);
+            this.buttonCancelar.TabIndex = 51;
+            this.buttonCancelar.Text = "Cancelar Edición";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Visible = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
             // FormularioInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 485);
+            this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.buttonEditar);
@@ -297,7 +310,7 @@
             this.Controls.Add(this.dataGridViewInformes);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioInformes";
-            this.Text = "FormularioInformes";
+            this.Text = "Formulario de Informes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInformes)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -330,5 +343,6 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonCancelar;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
 
 namespace Treapptment
@@ -164,6 +165,8 @@ namespace Treapptment
 
             buttonEditar.Enabled = true; // Lo habilitamos para poder editar
             buttonGuardar.Enabled = false; // para no guardar como otra fila la que estamos editando
+            buttonCancelar.Visible = true; // Mosctrat boton de cancelar
+
         }
 
         private void limpiar() // Vacía los campos del formulario
@@ -173,8 +176,12 @@ namespace Treapptment
             textBoxMedicamento.Text = "";
             textBoxFrecuencia.Text = "";
             textBoxDuracion.Text = "";
-        }
 
+        }
+        public bool EsEntero(string texto) // Para validar que freceuncia y duración son numeros enteros
+        {
+            return int.TryParse(texto, out _); 
+        }
         private void buttonGuardar_Click(object sender, EventArgs e) // Almacena en la base de datos los campos del formulario
         {
             String idTratamiento = textBoxIdTratamiento.Text;
@@ -182,8 +189,22 @@ namespace Treapptment
             String medicamento = textBoxMedicamento.Text;
             String frecuencia = textBoxFrecuencia.Text;
             String duracion = textBoxDuracion.Text;
-   
 
+            bool esFrecuenciaValida = EsEntero(frecuencia); // validar si es entero
+            bool esDuracionValida = EsEntero(duracion); // validar si es entero
+
+             if ( string.IsNullOrEmpty(frecuencia) || string.IsNullOrEmpty(duracion) || string.IsNullOrEmpty(duracion))
+            {
+                MessageBox.Show("Medicamento ID, frecuencia y duración son campos obligatorios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detiene la ejecución del método y no hace nada
+            }
+            if (!(esFrecuenciaValida && esDuracionValida)) // si no son enteros ambos campos
+            {
+                // Ambos valores son enteros válidos
+                MessageBox.Show("Duración y frecuencia deben ser valores enteros.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detiene la ejecución del método y no hace nada
+
+            }
             try
             {
                 connection.Open();
@@ -230,13 +251,23 @@ namespace Treapptment
             String frecuencia = textBoxFrecuencia.Text;
             String duracion = textBoxDuracion.Text;
 
+            bool esFrecuenciaValida = EsEntero(frecuencia); // validar si es entero
+            bool esDuracionValida = EsEntero(duracion); // validar si es entero
+
             if (string.IsNullOrEmpty(idMedicamento) || string.IsNullOrEmpty(frecuencia) || string.IsNullOrEmpty(duracion))
             {
-                MessageBox.Show("Todos los campos son obligatorios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Detiene la ejecución del método
+                MessageBox.Show("Medicamento ID, frecuencia y duración son campos obligatorios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detiene la ejecución del método y no hace nada
             }
-           
-         
+            if (!(esFrecuenciaValida && esDuracionValida)) // si no son enteros ambos campos
+            {
+                // Ambos valores son enteros válidos
+                MessageBox.Show("Duración y frecuencia deben ser valores enteros.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detiene la ejecución del método y no hace nada
+
+            }
+
+
 
             // Asignar la fecha de modificación con la fecha actual
             string fechaMod = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); // Para usar la fecha de la edición
@@ -283,6 +314,15 @@ namespace Treapptment
                 connection.Close();
 
             }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            buttonGuardar.Enabled = true;
+            buttonCancelar.Visible = false;
+            buttonEditar.Enabled = false;
+            limpiar();
+
         }
     }
 }

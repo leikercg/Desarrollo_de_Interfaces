@@ -60,7 +60,7 @@
             this.textBoxTelefono2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono2.Name = "textBoxTelefono2";
             this.textBoxTelefono2.Size = new System.Drawing.Size(192, 20);
-            this.textBoxTelefono2.TabIndex = 2;
+            this.textBoxTelefono2.TabIndex = 6;
             // 
             // textBoxTelefono1
             // 
@@ -68,7 +68,7 @@
             this.textBoxTelefono1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono1.Name = "textBoxTelefono1";
             this.textBoxTelefono1.Size = new System.Drawing.Size(192, 20);
-            this.textBoxTelefono1.TabIndex = 3;
+            this.textBoxTelefono1.TabIndex = 5;
             // 
             // textBoxCodigoPostal
             // 
@@ -84,7 +84,7 @@
             this.textBoxCiudad.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCiudad.Name = "textBoxCiudad";
             this.textBoxCiudad.Size = new System.Drawing.Size(192, 20);
-            this.textBoxCiudad.TabIndex = 5;
+            this.textBoxCiudad.TabIndex = 3;
             // 
             // textBoxCalle
             // 
@@ -92,7 +92,7 @@
             this.textBoxCalle.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(192, 20);
-            this.textBoxCalle.TabIndex = 6;
+            this.textBoxCalle.TabIndex = 2;
             // 
             // label1
             // 
@@ -160,7 +160,7 @@
             this.textBoxTelefono3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono3.Name = "textBoxTelefono3";
             this.textBoxTelefono3.Size = new System.Drawing.Size(192, 20);
-            this.textBoxTelefono3.TabIndex = 13;
+            this.textBoxTelefono3.TabIndex = 7;
             // 
             // label7
             // 
@@ -178,7 +178,7 @@
             this.buttonGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(100, 30);
-            this.buttonGuardar.TabIndex = 15;
+            this.buttonGuardar.TabIndex = 8;
             this.buttonGuardar.Text = "Aceptar";
             this.buttonGuardar.UseVisualStyleBackColor = true;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);

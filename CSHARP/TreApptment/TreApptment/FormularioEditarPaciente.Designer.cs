@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioEditarPaciente));
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxTelefono3 = new System.Windows.Forms.TextBox();
@@ -74,7 +75,7 @@
             this.textBoxTelefono3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono3.Name = "textBoxTelefono3";
             this.textBoxTelefono3.Size = new System.Drawing.Size(192, 20);
-            this.textBoxTelefono3.TabIndex = 28;
+            this.textBoxTelefono3.TabIndex = 7;
             // 
             // label6
             // 
@@ -142,7 +143,7 @@
             this.textBoxCalle.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCalle.Name = "textBoxCalle";
             this.textBoxCalle.Size = new System.Drawing.Size(192, 20);
-            this.textBoxCalle.TabIndex = 21;
+            this.textBoxCalle.TabIndex = 2;
             // 
             // textBoxCiudad
             // 
@@ -150,7 +151,7 @@
             this.textBoxCiudad.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCiudad.Name = "textBoxCiudad";
             this.textBoxCiudad.Size = new System.Drawing.Size(192, 20);
-            this.textBoxCiudad.TabIndex = 20;
+            this.textBoxCiudad.TabIndex = 3;
             // 
             // textBoxCodigoPostal
             // 
@@ -158,7 +159,7 @@
             this.textBoxCodigoPostal.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCodigoPostal.Name = "textBoxCodigoPostal";
             this.textBoxCodigoPostal.Size = new System.Drawing.Size(192, 20);
-            this.textBoxCodigoPostal.TabIndex = 19;
+            this.textBoxCodigoPostal.TabIndex = 4;
             // 
             // textBoxTelefono1
             // 
@@ -166,7 +167,7 @@
             this.textBoxTelefono1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono1.Name = "textBoxTelefono1";
             this.textBoxTelefono1.Size = new System.Drawing.Size(192, 20);
-            this.textBoxTelefono1.TabIndex = 18;
+            this.textBoxTelefono1.TabIndex = 5;
             // 
             // textBoxTelefono2
             // 
@@ -174,7 +175,7 @@
             this.textBoxTelefono2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono2.Name = "textBoxTelefono2";
             this.textBoxTelefono2.Size = new System.Drawing.Size(192, 20);
-            this.textBoxTelefono2.TabIndex = 17;
+            this.textBoxTelefono2.TabIndex = 6;
             // 
             // textBoxNombre
             // 
@@ -182,7 +183,7 @@
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(192, 20);
-            this.textBoxNombre.TabIndex = 16;
+            this.textBoxNombre.TabIndex = 1;
             // 
             // textBoxPacienteId
             // 
@@ -223,6 +224,7 @@
             this.Controls.Add(this.textBoxTelefono2);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.buttonGuardar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioEditarPaciente";
             this.Text = "Formulario Editar Paciente";

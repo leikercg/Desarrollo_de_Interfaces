@@ -8,7 +8,7 @@ CREATE TABLE Usuarios (
 -- Insertar Usuario Médico
 
 INSERT INTO Usuarios (nombre, password)
-VALUES ('Leiker', 'leiker');
+VALUES ('leiker', 'leiker');
 
 -- Tabla Paciente
 CREATE TABLE Pacientes (
@@ -28,7 +28,7 @@ CREATE TABLE Informes (
     id_paciente INT,
     fecha_creacion DATETIME DEFAULT GETDATE() NOT NULL,
     fecha_modificacion DATETIME DEFAULT GETDATE(),
-    nombre_medico VARCHAR(255) DEFAULT 'Leiker' NOT NULL,
+    nombre_medico VARCHAR(255) DEFAULT 'Dr. Leiker' NOT NULL,
     centro_medico VARCHAR(255) DEFAULT 'Palafox' NOT NULL,
     motivo TEXT,
     recomendaciones TEXT,

@@ -5,6 +5,11 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treapptment", "Treapptment\Treapptment.csproj", "{5484DD64-241E-45C9-807E-22B97C5497EF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{BC5BC622-770D-4F86-A4FA-D8709E2E8A8E}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\pastillas.jpg = ..\..\..\Downloads\pastillas.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

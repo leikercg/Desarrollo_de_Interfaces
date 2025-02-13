@@ -116,7 +116,10 @@ namespace Treapptment
 
             buttonEditar.Enabled = true; // Lo habilitamos para poder editar
             buttonGuardar.Enabled = false; // para no guardar como otra fila la que estamos editando
-        
+
+            // Activamos el boton de cancelar
+            buttonCancelar.Visible = true;
+
         }
       
 
@@ -299,6 +302,13 @@ namespace Treapptment
 
         }
 
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            buttonGuardar.Enabled = true;
+            buttonCancelar.Visible = false;
+            buttonEditar.Enabled = false;
 
+            limpiar();
+        }
     }
 }

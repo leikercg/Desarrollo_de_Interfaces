@@ -46,6 +46,8 @@
             this.textBoxIdTratamiento = new System.Windows.Forms.TextBox();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonGuardar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTratamientos)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -90,8 +92,9 @@
             // 
             // comboBoxMedicamentos
             // 
+            this.comboBoxMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMedicamentos.FormattingEnabled = true;
-            this.comboBoxMedicamentos.Location = new System.Drawing.Point(518, 85);
+            this.comboBoxMedicamentos.Location = new System.Drawing.Point(553, 85);
             this.comboBoxMedicamentos.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMedicamentos.Name = "comboBoxMedicamentos";
             this.comboBoxMedicamentos.Size = new System.Drawing.Size(92, 21);
@@ -113,17 +116,17 @@
             this.textBoxFrecuencia.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFrecuencia.Name = "textBoxFrecuencia";
             this.textBoxFrecuencia.Size = new System.Drawing.Size(190, 20);
-            this.textBoxFrecuencia.TabIndex = 61;
+            this.textBoxFrecuencia.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(160, 89);
+            this.label7.Location = new System.Drawing.Point(144, 89);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.Size = new System.Drawing.Size(85, 13);
             this.label7.TabIndex = 59;
-            this.label7.Text = "Medicamento";
+            this.label7.Text = "Medicamento ID";
             // 
             // label6
             // 
@@ -165,6 +168,7 @@
             // 
             // textBoxMedicamento
             // 
+            this.textBoxMedicamento.Enabled = false;
             this.textBoxMedicamento.Location = new System.Drawing.Point(233, 86);
             this.textBoxMedicamento.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMedicamento.Name = "textBoxMedicamento";
@@ -177,7 +181,7 @@
             this.textBoxDuracion.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDuracion.Name = "textBoxDuracion";
             this.textBoxDuracion.Size = new System.Drawing.Size(190, 20);
-            this.textBoxDuracion.TabIndex = 51;
+            this.textBoxDuracion.TabIndex = 3;
             // 
             // textBoxIdTratamiento
             // 
@@ -189,7 +193,7 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(682, 55);
+            this.buttonEditar.Location = new System.Drawing.Point(667, 58);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(100, 30);
             this.buttonEditar.TabIndex = 65;
@@ -199,7 +203,7 @@
             // 
             // buttonGuardar
             // 
-            this.buttonGuardar.Location = new System.Drawing.Point(682, 103);
+            this.buttonGuardar.Location = new System.Drawing.Point(667, 106);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(100, 30);
             this.buttonGuardar.TabIndex = 66;
@@ -207,11 +211,34 @@
             this.buttonGuardar.UseVisualStyleBackColor = true;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(438, 89);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 13);
+            this.label3.TabIndex = 67;
+            this.label3.Text = "Medicamento Nombre";
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(783, 58);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(100, 30);
+            this.buttonCancelar.TabIndex = 68;
+            this.buttonCancelar.Text = "Cancelar Edición";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Visible = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
             // FormularioTratamientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 366);
+            this.ClientSize = new System.Drawing.Size(904, 366);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.label2);
@@ -228,7 +255,7 @@
             this.Controls.Add(this.dataGridViewTratamientos);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioTratamientos";
-            this.Text = "FormularioTratamientos";
+            this.Text = "Formulario de Tratamientos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTratamientos)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -255,5 +282,7 @@
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonGuardar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonCancelar;
     }
 }
