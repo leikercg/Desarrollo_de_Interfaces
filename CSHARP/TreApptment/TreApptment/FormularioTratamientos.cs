@@ -312,7 +312,7 @@ namespace Treapptment
                 buttonEditar.Enabled = false;
                 limpiar(); // Limpia los campos
                 connection.Close();
-
+                buttonCancelar.Visible = false;
             }
         }
 

@@ -198,6 +198,8 @@ namespace Treapptment
                 buttonEditar.Enabled = false;
                 limpiar(); // Limpia los campos
                 connection.Close();
+                buttonCancelar.Visible = false;
+
 
             }
 
@@ -309,6 +311,59 @@ namespace Treapptment
             buttonEditar.Enabled = false;
 
             limpiar();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaSeleccionada = dateTimePicker1.Value.Date;  // Usar .Date para asegurar que solo se considere la fecha sin la hora
+            int IdPaciente = _idPaciente;
+            buttonVerTodos.Visible = true;
+            try
+            {
+                connection.Open();
+
+                // Usamos CAST para comparar solo la fecha en SQL, sin considerar la hora
+                string sql = @"SELECT * FROM informes WHERE CAST(fecha_creacion AS DATE) = @fechaSeleccionada";
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                // Pasamos la fecha como DateTime, no como string
+                command.Parameters.AddWithValue("@fechaSeleccionada", fechaSeleccionada);
+                command.Parameters.AddWithValue("@idPaciente", IdPaciente);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    limpiar();
+                    reader.Close();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dataGridViewInformes.DataSource = dataTable; // Rellena el data grid de manera dinámica
+                }
+                else
+                {
+                    MessageBox.Show("No hay informes con esa fecha.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al ejecutar la consulta: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void buttonVerTodos_Click(object sender, EventArgs e)
+        {
+            limpiar();
+            CargarInformes();
+            buttonVerTodos.Visible = false;
         }
     }
 }

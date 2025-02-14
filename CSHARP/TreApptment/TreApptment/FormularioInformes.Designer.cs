@@ -53,6 +53,9 @@
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.buttonVerTodos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInformes)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -282,11 +285,42 @@
             this.buttonCancelar.Visible = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(483, 150);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(147, 13);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Buscar por fecha de creación";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(636, 144);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 53;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // buttonVerTodos
+            // 
+            this.buttonVerTodos.Location = new System.Drawing.Point(837, 87);
+            this.buttonVerTodos.Name = "buttonVerTodos";
+            this.buttonVerTodos.Size = new System.Drawing.Size(100, 30);
+            this.buttonVerTodos.TabIndex = 54;
+            this.buttonVerTodos.Text = "Ver todos";
+            this.buttonVerTodos.UseVisualStyleBackColor = true;
+            this.buttonVerTodos.Visible = false;
+            this.buttonVerTodos.Click += new System.EventHandler(this.buttonVerTodos_Click);
+            // 
             // FormularioInformes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 485);
+            this.Controls.Add(this.buttonVerTodos);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.buttonGuardar);
@@ -344,5 +378,8 @@
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button buttonVerTodos;
     }
 }

@@ -1,4 +1,4 @@
-﻿
+﻿-- Tabla Usuarios
 CREATE TABLE Usuarios (
     id_usuario INT IDENTITY(1,1) PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
@@ -6,9 +6,8 @@ CREATE TABLE Usuarios (
 );
 
 -- Insertar Usuario Médico
-
 INSERT INTO Usuarios (nombre, password)
-VALUES ('leiker', 'leiker');
+VALUES ('Leiker', 'leiker');
 
 -- Tabla Paciente
 CREATE TABLE Pacientes (
@@ -26,12 +25,12 @@ CREATE TABLE Pacientes (
 CREATE TABLE Informes (
     id_informe INT IDENTITY(1,1) PRIMARY KEY,
     id_paciente INT,
-    fecha_creacion DATETIME DEFAULT GETDATE() NOT NULL,
-    fecha_modificacion DATETIME DEFAULT GETDATE(),
-    nombre_medico VARCHAR(255) DEFAULT 'Dr. Leiker' NOT NULL,
+    fecha_creacion DATE DEFAULT CAST(GETDATE() AS DATE) NOT NULL,  -- Cambiado a DATE para solo fecha
+    fecha_modificacion DATE DEFAULT CAST(GETDATE() AS DATE),  -- Cambiado a DATE para solo fecha
+    nombre_medico VARCHAR(255) DEFAULT 'Leiker' NOT NULL,
     centro_medico VARCHAR(255) DEFAULT 'Palafox' NOT NULL,
-    motivo TEXT,
-    recomendaciones TEXT,
+    motivo VARCHAR(MAX),  -- Cambiado de TEXT a VARCHAR(MAX)
+    recomendaciones VARCHAR(MAX),  -- Cambiado de TEXT a VARCHAR(MAX)
     FOREIGN KEY (id_paciente) REFERENCES Pacientes(id_paciente) ON DELETE CASCADE
 );
 
@@ -40,7 +39,8 @@ CREATE TABLE Medicamentos (
     id_medicamento INT IDENTITY(1,1) PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
     precio DECIMAL(10,2) NOT NULL,
-    descuento DECIMAL(5,2) DEFAULT 0 );
+    descuento DECIMAL(5,2) DEFAULT 0
+);
 
 -- Tabla Tratamiento
 CREATE TABLE Linea_Tratamiento (
