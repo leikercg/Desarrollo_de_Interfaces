@@ -28,3 +28,4 @@ D:\DESARROLLO_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.cs
 D:\DESARROLLO_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.csproj.CoreCompileInputs.cache
 D:\DESARROLLO_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.exe
 D:\DESARROLLO_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.pdb
+D:\DESARROLLO_DE_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.FormularioMedicamentos.resources

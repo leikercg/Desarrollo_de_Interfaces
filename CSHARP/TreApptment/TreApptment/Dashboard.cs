@@ -191,5 +191,12 @@ namespace Treapptment
                 formInformes.ShowDialog();
             }
         }
+
+        private void buttonMedicamentos_Click(object sender, EventArgs e)
+        {
+            
+            FormularioMedicamentos formMedicamentos = new FormularioMedicamentos();
+            formMedicamentos.ShowDialog(); 
+        }
     }
 }

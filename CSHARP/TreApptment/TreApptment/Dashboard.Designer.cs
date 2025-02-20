@@ -47,6 +47,7 @@
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonMedicamentos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPacientes)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -223,11 +224,22 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Para mostrar todos los pacientes realiza una búsqueda en blanco";
             // 
+            // buttonMedicamentos
+            // 
+            this.buttonMedicamentos.Location = new System.Drawing.Point(345, 295);
+            this.buttonMedicamentos.Name = "buttonMedicamentos";
+            this.buttonMedicamentos.Size = new System.Drawing.Size(114, 30);
+            this.buttonMedicamentos.TabIndex = 7;
+            this.buttonMedicamentos.Text = "Ver medicamentos";
+            this.buttonMedicamentos.UseVisualStyleBackColor = true;
+            this.buttonMedicamentos.Click += new System.EventHandler(this.buttonMedicamentos_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 366);
+            this.Controls.Add(this.buttonMedicamentos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewPacientes);
@@ -265,5 +277,6 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonMedicamentos;
     }
 }
