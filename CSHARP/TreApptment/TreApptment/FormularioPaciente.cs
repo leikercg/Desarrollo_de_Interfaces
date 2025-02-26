@@ -6,7 +6,7 @@ namespace Treapptment
 {
     public partial class FormularioPaciente : Form
     {
-        private Dashboard _dashboard; // Para almacenar la referencia de Dashboard
+        private Dashboard _dashboard; // para almacenar la referencia de Dashboard
         string cadenaDeConexion = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Treapptment;Integrated Security=True;";
         SqlConnection connection;
 
@@ -17,7 +17,7 @@ namespace Treapptment
             _dashboard = dashboard;
         }
 
-            private void buttonGuardar_Click(object sender, EventArgs e) // Agregar paciente
+            private void buttonGuardar_Click(object sender, EventArgs e) // sgregar paciente
         {
             connection = new SqlConnection(cadenaDeConexion);
 
@@ -30,13 +30,13 @@ namespace Treapptment
             string telefono3 = textBoxTelefono3.Text.Trim();
 
            
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(calle)) // Si no se cumple esto devolver sin hacer nada.
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(calle)) // si no se cumple esto devolver sin hacer nada.
             {
                 MessageBox.Show("El nombre y la calle son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (string.IsNullOrEmpty(ciudad)) // Marcar Zaragoza si la ciudad esta en blanco
+            if (string.IsNullOrEmpty(ciudad)) // Zaragoza si la ciudad esta en blanco
             {
                 ciudad = "Zaragoza";
 
@@ -48,7 +48,7 @@ namespace Treapptment
 
             try
             {
-                connection.Open(); // Abrimos conexion
+                connection.Open(); // abrimos conexion
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 
                     cmd.Parameters.Add("@Nombre", System.Data.SqlDbType.VarChar, 100).Value = nombre;
@@ -86,7 +86,7 @@ namespace Treapptment
             }
             finally
             {
-                connection.Close(); // Cerrar la conexión al finalizar
+                connection.Close(); // cerrar la conexión
             }
         }
 

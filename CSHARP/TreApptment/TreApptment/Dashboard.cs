@@ -21,29 +21,29 @@ namespace Treapptment
             CargarPacientes();
         }
 
-        public void CargarPacientes() // Carga los pacientes en la datagrid
+        public void CargarPacientes() // carga los pacientes en la datagrid
         {
-            // Crear una nueva conexión a la base de datos
+            // crear una nueva conexión a la base de datos
             connection = new SqlConnection(cadenaDeConexion);
 
-            // Crear el comando para seleccionar todos los pacientes
+            // crear el comando para seleccionar todos los pacientes
             string sql = "SELECT id_paciente, nombre, calle, ciudad, cod_postal, telefono1, telefono2, telefono3 FROM Pacientes";
 
             try
             {
-                connection.Open(); // Abrir la conexión
+                connection.Open(); // abrir la conexión
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader = command.ExecuteReader();
 
-                dataGridViewPacientes.Rows.Clear(); // Limpiar los datos previos
+                dataGridViewPacientes.Rows.Clear(); // limpiar los datos previos
 
                 while (reader.Read())
                 {
-                    // Agregar todas las columnas al DataGridView
+                    // agregar todas las columnas al DataGridView
                     dataGridViewPacientes.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7));
                 }
 
-                reader.Close(); // Cerrar el lector después de usarlo
+                reader.Close(); // cerrar el lector después de usarlo
             }
             catch (Exception ex)
             {
@@ -56,17 +56,17 @@ namespace Treapptment
         private void buttonCerrarSesion_Click(object sender, EventArgs e)
         {
 
-            connection.Close(); // Cerrar la conexion
-            this.Close(); // Ocultamos el formulario actual 
-            Form1 form1 = new Form1(); // Creamos una instancia de Form1
+            connection.Close(); // cerrar la conexion
+            this.Close(); // ocultamos el formulario actual 
+            Login form1 = new Login(); // creamos una instancia de Form1
             form1.Show();
         }
 
         private void buttonAgregarPaciente_Click(object sender, EventArgs e)
         {
-            // Mostrar el formulario para agregar un paciente
+            // mostrar el formulario para agregar un paciente
             FormularioPaciente formAgregarPaciente = new FormularioPaciente(this);
-            formAgregarPaciente.ShowDialog(); // ShowDialog para que el usuario complete el formulario antes de continuar o no se haga nada
+            formAgregarPaciente.ShowDialog(); // showDialog para que el usuario complete el formulario antes de continuar o no se haga nada
 
         }
 
@@ -74,10 +74,10 @@ namespace Treapptment
         {
             connection.Open();
 
-            // Limpiar el DataGridView antes de cargar nuevos datos
+            // limpiar el DataGridView antes de cargar nuevos datos
             dataGridViewPacientes.Rows.Clear();
 
-            string sql = "SELECT * FROM pacientes WHERE nombre LIKE '%' + @Nombre + '%'"; // Para indicar que contiene el texto ingresado
+            string sql = "SELECT * FROM pacientes WHERE nombre LIKE '%' + @Nombre + '%'"; // indicar que contiene el texto ingresado
             SqlCommand command = new SqlCommand(sql, connection);
             command.Parameters.AddWithValue("@Nombre", textBoxNombre.Text.Trim());
             SqlDataReader reader = command.ExecuteReader();
@@ -88,14 +88,14 @@ namespace Treapptment
                 {
                     // Agregar fila al DataGridView con todas las columnas
                     dataGridViewPacientes.Rows.Add(
-                        reader.GetInt32(0),   // ID 
-                        reader.GetString(1),  // Nombre
-                        reader.GetString(2),  // Calle
-                        reader.GetString(3),  // Ciudad
-                        reader.GetString(4),  // Código Postal
-                        reader.GetString(5),  // Teléfono 1
-                        reader.GetString(6),  // Teléfono 2
-                        reader.GetString(7)   // Teléfono 3
+                        reader.GetInt32(0),  
+                        reader.GetString(1),  
+                        reader.GetString(2),  
+                        reader.GetString(3),   
+                        reader.GetString(4),    
+                        reader.GetString(5),    
+                        reader.GetString(6),   
+                        reader.GetString(7)  
                     );
                 }
             }
@@ -104,16 +104,22 @@ namespace Treapptment
                 MessageBox.Show($"No existe el paciente {textBoxNombre.Text}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            // Cerrar lector y conexión
+            // cerrar lector y conexión
             reader.Close();
-            textBoxNombre.Text = ""; // Limpiar el buscador
+            textBoxNombre.Text = ""; // limpiar el buscador
             connection.Close();
         }
 
-        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e) // Opción de eliminar desde el menú contextual
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e) // opción de eliminar desde el menú contextual
         {
-            // Obtener el ID del paciente seleccionado 
-            int pacienteId = (int)dataGridViewPacientes.SelectedRows[0].Cells[0].Value; // Por que está en la primera columna
+            if (dataGridViewPacientes.SelectedRows.Count == 0 || dataGridViewPacientes.SelectedRows[0].Index == -1)
+            {
+                MessageBox.Show("Seleccione un informe válido para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // obtener el ID del paciente seleccionado 
+            int pacienteId = (int)dataGridViewPacientes.SelectedRows[0].Cells[0].Value; // por que está en la primera columna
           
                 try
                 {
@@ -146,8 +152,13 @@ namespace Treapptment
 
          }
 
-        private void editarToolStripMenuItem_Click(object sender, EventArgs e) // Opción de editar con el menú contextual
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e) // editar con el menú contextual
         {
+            if (dataGridViewPacientes.SelectedRows.Count == 0 || dataGridViewPacientes.SelectedRows[0].Index == -1)
+            {
+                MessageBox.Show("Seleccione un informe válido para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             int pacienteId = (int)dataGridViewPacientes.SelectedRows[0].Cells[0].Value;
             string nombre = dataGridViewPacientes.SelectedRows[0].Cells[1].Value.ToString();
             string calle = dataGridViewPacientes.SelectedRows[0].Cells[2].Value.ToString();
@@ -157,36 +168,36 @@ namespace Treapptment
             string telefono2 = dataGridViewPacientes.SelectedRows[0].Cells[6].Value.ToString();
             string telefono3 = dataGridViewPacientes.SelectedRows[0].Cells[7].Value.ToString();
 
-            // Mostrar el formulario para editar el paciente, pasando estos datos para mostrarlos
+            // mostrar el formulario para editar el paciente, pasando estos datos para mostrarlos
             FormularioEditarPaciente formEditar = new FormularioEditarPaciente(pacienteId, nombre, calle, ciudad, codPostal, telefono1, telefono2, telefono3);
 
 
-            if (formEditar.ShowDialog() == DialogResult.OK) // Si se ha llevado a cabo con éxito refrescar los datos
+            if (formEditar.ShowDialog() == DialogResult.OK) // si se ha llevado a cabo con éxito refrescar los datos
             {
                 CargarPacientes();
             }
         }
 
-        private void dataGridViewPacientes_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) // Para detectar que botón ha sido pulsado y sobre que fila
+        private void dataGridViewPacientes_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) // para detectar que botón ha sido pulsado y sobre que fila
         {
-            if (e.Button == MouseButtons.Right) // Si el botón clickeado es el derecho
+            if (e.Button == MouseButtons.Right) // si el botón clickeado es el derecho
             {
-                if (e.RowIndex >= 0) // Verificamos si se hace clic sobre una fila válida
+                if (e.RowIndex >= 0) // verificamos si se hace clic sobre una fila válida
                 {
-                    // Seleccionar la fila clickeada
+                    // seleccionar la fila clickeada
                     dataGridViewPacientes.ClearSelection();
                     dataGridViewPacientes.Rows[e.RowIndex].Selected = true;
                 }
             }
         }
 
-        private void dataGridViewPacientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e) // Para abrir los informes relacionados con el paciente.
+        private void dataGridViewPacientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e) // para abrir los informes relacionados con el paciente.
         {
             if (e.RowIndex >= 0) // Verificamos que sea una fila válida
             {
-                int idPaciente = (int)dataGridViewPacientes.Rows[e.RowIndex].Cells[0].Value; // Obtener el ID del paciente
+                int idPaciente = (int)dataGridViewPacientes.Rows[e.RowIndex].Cells[0].Value; // obtener el ID del paciente
 
-                // Abrir el formulario de informes, pasando el ID del paciente
+                // abrir el formulario de informes, pasando el ID del paciente
                 FormularioInformes formInformes = new FormularioInformes(idPaciente);
                 formInformes.ShowDialog();
             }

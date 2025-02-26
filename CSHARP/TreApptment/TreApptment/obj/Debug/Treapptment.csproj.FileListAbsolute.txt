@@ -2,7 +2,6 @@ D:\DESARROLLO_DE_INTERFACES\CSHARP\Treapptment\Treapptment\bin\Debug\Treapptment
 D:\DESARROLLO_DE_INTERFACES\CSHARP\Treapptment\Treapptment\bin\Debug\Treapptment.exe
 D:\DESARROLLO_DE_INTERFACES\CSHARP\Treapptment\Treapptment\bin\Debug\Treapptment.pdb
 D:\DESARROLLO_DE_INTERFACES\CSHARP\Treapptment\Treapptment\obj\Debug\Treapptment.csproj.AssemblyReference.cache
-D:\DESARROLLO_DE_INTERFACES\CSHARP\Treapptment\Treapptment\obj\Debug\Treapptment.Form1.resources
 D:\DESARROLLO_DE_INTERFACES\CSHARP\Treapptment\Treapptment\obj\Debug\Treapptment.Properties.Resources.resources
 D:\DESARROLLO_DE_INTERFACES\CSHARP\Treapptment\Treapptment\obj\Debug\Treapptment.csproj.GenerateResource.cache
 D:\DESARROLLO_DE_INTERFACES\CSHARP\Treapptment\Treapptment\obj\Debug\Treapptment.csproj.CoreCompileInputs.cache
@@ -29,3 +28,4 @@ D:\DESARROLLO_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.cs
 D:\DESARROLLO_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.exe
 D:\DESARROLLO_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.pdb
 D:\DESARROLLO_DE_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.FormularioMedicamentos.resources
+D:\DESARROLLO_DE_INTERFACES\CSHARP\TreApptment\Treapptment\obj\Debug\Treapptment.Login.resources

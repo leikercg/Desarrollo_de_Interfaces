@@ -54,10 +54,10 @@
             // 
             // buttonCerrarSesion
             // 
-            this.buttonCerrarSesion.Location = new System.Drawing.Point(651, 295);
-            this.buttonCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCerrarSesion.Location = new System.Drawing.Point(868, 363);
+            this.buttonCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCerrarSesion.Name = "buttonCerrarSesion";
-            this.buttonCerrarSesion.Size = new System.Drawing.Size(100, 30);
+            this.buttonCerrarSesion.Size = new System.Drawing.Size(133, 37);
             this.buttonCerrarSesion.TabIndex = 0;
             this.buttonCerrarSesion.Text = "Cerrar Sesión";
             this.buttonCerrarSesion.UseVisualStyleBackColor = true;
@@ -65,10 +65,10 @@
             // 
             // buttonAgregarPaciente
             // 
-            this.buttonAgregarPaciente.Location = new System.Drawing.Point(57, 295);
-            this.buttonAgregarPaciente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAgregarPaciente.Location = new System.Drawing.Point(76, 363);
+            this.buttonAgregarPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAgregarPaciente.Name = "buttonAgregarPaciente";
-            this.buttonAgregarPaciente.Size = new System.Drawing.Size(100, 30);
+            this.buttonAgregarPaciente.Size = new System.Drawing.Size(133, 37);
             this.buttonAgregarPaciente.TabIndex = 1;
             this.buttonAgregarPaciente.Text = "Agregar Paciente";
             this.buttonAgregarPaciente.UseVisualStyleBackColor = true;
@@ -76,18 +76,18 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(327, 47);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNombre.Location = new System.Drawing.Point(436, 58);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(254, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(337, 22);
             this.textBoxNombre.TabIndex = 2;
             // 
             // buttonBuscarPaciente
             // 
-            this.buttonBuscarPaciente.Location = new System.Drawing.Point(585, 41);
-            this.buttonBuscarPaciente.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBuscarPaciente.Location = new System.Drawing.Point(780, 50);
+            this.buttonBuscarPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscarPaciente.Name = "buttonBuscarPaciente";
-            this.buttonBuscarPaciente.Size = new System.Drawing.Size(100, 30);
+            this.buttonBuscarPaciente.Size = new System.Drawing.Size(133, 37);
             this.buttonBuscarPaciente.TabIndex = 3;
             this.buttonBuscarPaciente.Text = "Buscar Nombre";
             this.buttonBuscarPaciente.UseVisualStyleBackColor = true;
@@ -107,13 +107,13 @@
             this.Telefono2,
             this.Telefono3});
             this.dataGridViewPacientes.ContextMenuStrip = this.contextMenuStrip1;
-            this.dataGridViewPacientes.Location = new System.Drawing.Point(57, 85);
-            this.dataGridViewPacientes.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewPacientes.Location = new System.Drawing.Point(76, 105);
+            this.dataGridViewPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewPacientes.Name = "dataGridViewPacientes";
             this.dataGridViewPacientes.ReadOnly = true;
             this.dataGridViewPacientes.RowHeadersWidth = 51;
             this.dataGridViewPacientes.RowTemplate.Height = 24;
-            this.dataGridViewPacientes.Size = new System.Drawing.Size(694, 166);
+            this.dataGridViewPacientes.Size = new System.Drawing.Size(925, 204);
             this.dataGridViewPacientes.TabIndex = 4;
             this.dataGridViewPacientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPacientes_CellDoubleClick);
             this.dataGridViewPacientes.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewPacientes_CellMouseDown);
@@ -189,46 +189,47 @@
             this.eliminarToolStripMenuItem,
             this.editarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(118, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(133, 52);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(131, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(175, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 13);
+            this.label1.Size = new System.Drawing.Size(241, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Introduce el nombre o parte del nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 22);
+            this.label2.Location = new System.Drawing.Point(175, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(314, 13);
+            this.label2.Size = new System.Drawing.Size(398, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Para mostrar todos los pacientes realiza una búsqueda en blanco";
             // 
             // buttonMedicamentos
             // 
-            this.buttonMedicamentos.Location = new System.Drawing.Point(345, 295);
+            this.buttonMedicamentos.Location = new System.Drawing.Point(460, 363);
+            this.buttonMedicamentos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonMedicamentos.Name = "buttonMedicamentos";
-            this.buttonMedicamentos.Size = new System.Drawing.Size(114, 30);
+            this.buttonMedicamentos.Size = new System.Drawing.Size(152, 37);
             this.buttonMedicamentos.TabIndex = 7;
             this.buttonMedicamentos.Text = "Ver medicamentos";
             this.buttonMedicamentos.UseVisualStyleBackColor = true;
@@ -236,9 +237,9 @@
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 366);
+            this.ClientSize = new System.Drawing.Size(1053, 450);
             this.Controls.Add(this.buttonMedicamentos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -247,7 +248,9 @@
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.buttonAgregarPaciente);
             this.Controls.Add(this.buttonCerrarSesion);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.Text = "Escritorio";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPacientes)).EndInit();
