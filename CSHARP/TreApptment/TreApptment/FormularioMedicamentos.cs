@@ -16,7 +16,7 @@ namespace Treapptment
             InitializeComponent();
             CargarMedicamentos();
 
-            // Bloqueamos unos textos y botones
+            // bloqueamos unos textos y botones
             buttonEditar.Enabled = false;
         }
 
@@ -35,7 +35,7 @@ namespace Treapptment
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
-                // El DataTable como DataSource del DataGridView
+                // DataTable como DataSource del DataGridView
                 dataGridViewMedicamentos.DataSource = dataTable;
             }
             catch (Exception ex)
@@ -50,7 +50,7 @@ namespace Treapptment
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            // Validar que todos los campos estén rellenados
+            //  todos los campos estén rellenados
             if (string.IsNullOrWhiteSpace(textBoxNombre.Text) ||
                 string.IsNullOrWhiteSpace(textBoxPrecio.Text) ||
                 string.IsNullOrWhiteSpace(textBoxDescuento.Text))
@@ -59,7 +59,7 @@ namespace Treapptment
                 return;
             }
 
-            // Validar que el precio y el descuento sean números válidos con coma decimal
+            // precio y el descuento sean números válidos con coma decimal
             if (!decimal.TryParse(textBoxPrecio.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal precio))
             {
                 MessageBox.Show("El precio debe ser un número válido (ejemplo: 12,50).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -74,7 +74,7 @@ namespace Treapptment
 
             string nombre = textBoxNombre.Text;
 
-            // Verificar si el nombre ya existe en la base de datos
+            // verificar si el nombre ya existe en la base de datos
             string sqlVerificar = "SELECT COUNT(*) FROM Medicamentos WHERE nombre = @Nombre";
             string sqlInsertar = "INSERT INTO Medicamentos (nombre, precio, descuento) VALUES (@Nombre, @Precio, @Descuento)";
 
@@ -82,7 +82,7 @@ namespace Treapptment
             {
                 connection.Open();
 
-                // Verificar si el nombre ya existe
+                // verificar si el nombre ya existe
                 SqlCommand commandVerificar = new SqlCommand(sqlVerificar, connection);
                 commandVerificar.Parameters.AddWithValue("@Nombre", nombre);
                 int count = (int)commandVerificar.ExecuteScalar();
@@ -93,7 +93,7 @@ namespace Treapptment
                     return;
                 }
 
-                // Si el nombre no existe, proceder con la inserción
+                // di el nombre no existe, proceder con la inserción
                 SqlCommand commandInsertar = new SqlCommand(sqlInsertar, connection);
                 commandInsertar.Parameters.AddWithValue("@Nombre", nombre);
                 commandInsertar.Parameters.AddWithValue("@Precio", precio);
@@ -102,7 +102,7 @@ namespace Treapptment
 
                 MessageBox.Show("Medicamento creado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarMedicamentos();
-                limpiar(); // Limpiar los campos después de guardar
+                limpiar(); // limpiar los campos después de guardar
             }
             catch (Exception ex)
             {
@@ -116,14 +116,14 @@ namespace Treapptment
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-            // Validar que se haya seleccionado una fila en el DataGridView
+            // validar que se haya seleccionado una fila en el DataGridView
             if (dataGridViewMedicamentos.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Por favor, seleccione un medicamento para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Validar que todos los campos estén rellenados
+            // validar que todos los campos estén rellenados
             if (string.IsNullOrWhiteSpace(textBoxNombre.Text) ||
                 string.IsNullOrWhiteSpace(textBoxPrecio.Text) ||
                 string.IsNullOrWhiteSpace(textBoxDescuento.Text))
@@ -132,7 +132,7 @@ namespace Treapptment
                 return;
             }
 
-            // Validar que el precio y el descuento sean números válidos con coma decimal
+            // validar que el precio y el descuento sean números válidos con coma decimal
             if (!decimal.TryParse(textBoxPrecio.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal precio))
             {
                 MessageBox.Show("El precio debe ser un número válido (ejemplo: 12,50).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -165,7 +165,7 @@ namespace Treapptment
                 buttonCancelar.Visible = false;
                 buttonBuscar.Enabled = true;
 
-                limpiar(); // Limpiar los campos después de editar
+                limpiar(); // limpiar los campos después de editar
             }
             catch (Exception ex)
             {
@@ -179,7 +179,7 @@ namespace Treapptment
 
         private void limpiar()
         {
-            // Limpiar los campos del formulario
+           
             textBoxIdMedicamento.Text = "";
             textBoxNombre.Text = "";
             textBoxPrecio.Text = "";
@@ -199,8 +199,9 @@ namespace Treapptment
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+                textBoxBusqueda.Text = "";
 
-                // Asignar el DataTable como DataSource del DataGridView
+                // asignar el DataTable como DataSource del DataGridView
                 dataGridViewMedicamentos.DataSource = dataTable;
             }
             catch (Exception ex)
@@ -215,23 +216,34 @@ namespace Treapptment
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Rellenamos los campos con la fila a editar
+            if (dataGridViewMedicamentos.SelectedRows.Count == 0 || dataGridViewMedicamentos.SelectedRows[0].Index == -1)
+            {
+                MessageBox.Show("Seleccione un informe válido para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            // rellenamos los campos con la fila a editar
             textBoxIdMedicamento.Text = dataGridViewMedicamentos.SelectedRows[0].Cells[0].Value.ToString();
             textBoxNombre.Text = dataGridViewMedicamentos.SelectedRows[0].Cells[1].Value.ToString();
             textBoxPrecio.Text = dataGridViewMedicamentos.SelectedRows[0].Cells[2].Value.ToString();
             textBoxDescuento.Text = dataGridViewMedicamentos.SelectedRows[0].Cells[3].Value.ToString();
 
             textBoxBusqueda.Enabled = false;
-            buttonEditar.Enabled = true; // Lo habilitamos para poder editar
-            buttonGuardar.Enabled = false; // Para no guardar como otra fila la que estamos editando
+            buttonEditar.Enabled = true; // lo habilitamos para poder editar
+            buttonGuardar.Enabled = false; // para no guardar como otra fila la que estamos editando
             buttonBuscar.Enabled = false;
 
-            // Activamos el botón de cancelar
+            // activamos el botón de cancelar
             buttonCancelar.Visible = true;
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            if (dataGridViewMedicamentos.SelectedRows.Count == 0 || dataGridViewMedicamentos.SelectedRows[0].Index == -1)
+            {
+                MessageBox.Show("Seleccione un informe válido para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             // ID del medicamento seleccionado
             int medicamento_ID = (int)dataGridViewMedicamentos.SelectedRows[0].Cells[0].Value;
 
@@ -243,7 +255,7 @@ namespace Treapptment
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.Parameters.AddWithValue("@MedicamentoId", medicamento_ID);
 
-                // Ejecutar la consulta
+                // ejecutar la consulta
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
@@ -267,11 +279,11 @@ namespace Treapptment
 
         private void dataGridViewMedicamentos_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right) // Si el botón clickeado es el derecho
+            if (e.Button == MouseButtons.Right) // si el botón clickeado es el derecho
             {
-                if (e.RowIndex >= 0) // Verificamos si se hace clic sobre una fila válida
+                if (e.RowIndex >= 0) // verificamos si se hace clic sobre una fila válida
                 {
-                    // Seleccionar la fila clickeada
+                    // seleccionar la fila clickeada
                     dataGridViewMedicamentos.ClearSelection();
                     dataGridViewMedicamentos.Rows[e.RowIndex].Selected = true;
                 }
@@ -292,8 +304,10 @@ namespace Treapptment
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            // Llamar al método de búsqueda
+            // llamar al método búsqueda
             textBoxBusqueda_TextChanged(sender, e);
         }
+
+   
     }
 }

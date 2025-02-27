@@ -21,7 +21,7 @@ namespace Treapptment
         {
             InitializeComponent();
 
-            // Rellenar los campos con los datos actuales del paciente
+            // rellenar los campos con los datos actuales del paciente
             pacienteId = id;
             textBoxPacienteId.Text = id.ToString();
             textBoxNombre.Text = nombre;
@@ -39,15 +39,15 @@ namespace Treapptment
 
             try
             {
-                // Establecer la conexión con la base de datos usando la cadena de conexión
+                // establecer la conexión con la base de datos usando la cadena de conexión
                 connection = new SqlConnection(cadenaDeConexion);
                 connection.Open();
 
-                // Actualizar los datos del paciente
+                // actualizar los datos del paciente
                 string sql = "UPDATE Pacientes SET nombre = @Nombre, calle = @Calle, ciudad = @Ciudad, cod_postal = @CodPostal, telefono1 = @Telefono1, telefono2 = @Telefono2, telefono3 = @Telefono3 WHERE id_paciente = @PacienteId";
                 SqlCommand command = new SqlCommand(sql, connection);
 
-                // Verificar que no se borra el nombre ni la calle
+                // verificar que no se borra el nombre ni la calle
 
                 string nombre = textBoxNombre.Text.Trim();
                 string calle = textBoxCalle.Text.Trim();
@@ -58,19 +58,19 @@ namespace Treapptment
                 string telefono3 = textBoxTelefono3.Text.Trim();
 
 
-                if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(calle)) // Si no se cumple esto devolver sin hacer nada.
+                if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(calle)) // si no se cumple esto devolver sin hacer nada.
                 {
                     MessageBox.Show("El nombre y la calle son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                if (string.IsNullOrEmpty(ciudad)) // Marcar Zaragoza si la ciudad esta en blanco
+                if (string.IsNullOrEmpty(ciudad)) //  Zaragoza si la ciudad esta en blanco
                 {
                     ciudad = "Zaragoza";
                 }
 
 
-                    // Asignar los parámetros del SQL con los valores de los controles del formulario
+                    // asignar los parámetros del SQL con los valores de los controles del formulario
                     command.Parameters.AddWithValue("@PacienteId", pacienteId);
                 command.Parameters.AddWithValue("@Nombre", nombre);
                 command.Parameters.AddWithValue("@Calle", calle);
@@ -80,7 +80,7 @@ namespace Treapptment
                 command.Parameters.AddWithValue("@Telefono2", telefono2);
                 command.Parameters.AddWithValue("@Telefono3", telefono3);
 
-                // Ejecutar la consulta
+                // ejecutar la consulta
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
@@ -95,12 +95,12 @@ namespace Treapptment
             }
             catch (Exception ex)
             {
-                // Mostrar cualquier error ocurrido durante la conexión o actualización
+                // mostrar cualquier error ocurrido durante la conexión o actualización
                 MessageBox.Show($"Error al actualizar el paciente: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                // Asegurarnos de cerrar la conexión incluso si ocurre un error
+                // asegurarnos de cerrar la conexión incluso si ocurre un error
                 if (connection.State == ConnectionState.Open)
                 {
                     connection.Close();

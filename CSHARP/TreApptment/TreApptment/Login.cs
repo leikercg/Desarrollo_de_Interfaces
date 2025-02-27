@@ -4,19 +4,19 @@ using System.Windows.Forms;
 
 namespace Treapptment
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         string cadenaDeConexion = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Treapptment;Integrated Security=True;";
         SqlConnection connection;
 
-        public Form1()
+        public Login()
         {
             InitializeComponent();
             button1.Text = "Iniciar Sesión";
-            button1.Click += new EventHandler(Button1_Click); // Asignar evento al botón
+            button1.Click += new EventHandler(Button1_Click); // asignar evento al botón
         }
 
-        // Evento al hacer clic en el botón de login
+        // evento al hacer clic en el botón de login
         private void Button1_Click(object sender, EventArgs e)
         {
             string usuario = textBox1.Text;
@@ -24,11 +24,11 @@ namespace Treapptment
 
             if (ValidarUsuario(usuario, contraseña))
             {
-                //MessageBox.Show("Inicio de sesión exitoso", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Inicio de sesión exitoso", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Dashboard dashboard = new Dashboard();
                 dashboard.Show();
-                this.Hide(); // Oculta el login
+                this.Hide(); // oculta el login
             }
             else
             {
@@ -39,7 +39,7 @@ namespace Treapptment
             }
         }
 
-        // Método para validar usuario y contraseña en la base de datos
+        // metodo para validar usuario y contraseña en la base de datos
         private bool ValidarUsuario(string usuario, string contraseña)
         {
             connection = new SqlConnection(cadenaDeConexion);
@@ -56,7 +56,7 @@ namespace Treapptment
 
                         int count = (int)cmd.ExecuteScalar();
                         connection.Close();
-                        return count > 0; // Devuelve true si el usuario existe
+                        return count > 0; // devuelve true si el usuario existe
                     }
                 }
                 catch (Exception ex)

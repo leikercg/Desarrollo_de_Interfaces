@@ -19,7 +19,7 @@ namespace Treapptment
             CargarTratamientos();
             CargarMedicamentos();
 
-            // Bloqueamos unos textos y botones al cargar la página
+            // nloqueamos unos textos y botones al cargar la página
             textBoxIdTratamiento.Enabled = false;
             textBoxIdInforme.Text = _idInforme.ToString();
             textBoxIdInforme.Enabled = false;
@@ -45,9 +45,9 @@ namespace Treapptment
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
-                dataGridViewTratamientos.DataSource = dataTable; // Rellena el data grid de manera dinámica, sin tener que indicar numero de columnas en diseño
+                dataGridViewTratamientos.DataSource = dataTable; // rellena el data grid de manera dinámica, sin tener que indicar numero de columnas en diseño
 
-                // Cambiar nombres de columnas en el DataGridView, ya que de la manera anterior le da el nombre de la columna de la base de datos
+                // cambiar nombres de columnas en el DataGridView, ya que de la manera anterior le da el nombre de la columna de la base de datos
                 dataGridViewTratamientos.Columns["id_tratamiento"].HeaderText = "ID Tratamiento";
                 dataGridViewTratamientos.Columns["nombre"].HeaderText = "Nombre del Medicamento";
                 dataGridViewTratamientos.Columns["frecuencia_horas"].HeaderText = "Cada (horas)";
@@ -70,7 +70,7 @@ namespace Treapptment
         {
             SqlConnection connection = new SqlConnection(_cadenaDeConexion);
             
-                string sql = "SELECT id_medicamento, nombre, precio FROM Medicamentos"; // Ajusta según los datos que quieras mostrar
+                string sql = "SELECT id_medicamento, nombre, precio FROM Medicamentos"; // ajusta según los datos que quieras mostrar
 
                 try
                 {
@@ -80,12 +80,12 @@ namespace Treapptment
                     DataTable dataTable = new DataTable(); // rellena una data table
                     adapter.Fill(dataTable); // rellenar
 
-                    // Asignamos los valores al ComboBox
-                    comboBoxMedicamentos.DataSource = dataTable; // Extrae los valores de la date table
-                    comboBoxMedicamentos.DisplayMember = "nombre";  // Lo que se verá en el ComboBox
-                    comboBoxMedicamentos.ValueMember = "id_medicamento"; // El valor real de cada opción
+                    // asignamos los valores al ComboBox
+                    comboBoxMedicamentos.DataSource = dataTable; // extrae los valores de la date table
+                    comboBoxMedicamentos.DisplayMember = "nombre";  // lo que se verá en el ComboBox
+                    comboBoxMedicamentos.ValueMember = "id_medicamento"; // el valor real de cada opción
 
-                    // Suscribimos el evento SelectedIndexChanged
+                    // suscribimos el evento SelectedIndexChanged
                     comboBoxMedicamentos.SelectedIndexChanged += new EventHandler(comboBoxMedicamentos_SelectedIndexChanged);
 
                 }
@@ -95,27 +95,27 @@ namespace Treapptment
                 }
             connection.Close();
          }
-        private void comboBoxMedicamentos_SelectedIndexChanged(object sender, EventArgs e) // Evento que maneja que hacer al ser seleccionado un item del combo
+        private void comboBoxMedicamentos_SelectedIndexChanged(object sender, EventArgs e) // evento que maneja que hacer al ser seleccionado un item del combo
         {
             if (comboBoxMedicamentos.SelectedItem != null)
             {
-                // Obtener el id del medicamento seleccionado
+                // obtener el id del medicamento seleccionado
                 int idMedicamento = Convert.ToInt32(((DataRowView)comboBoxMedicamentos.SelectedItem)["id_medicamento"]); // Seleccionar esa columna del combo asociado a la datatable
 
-                // Establecer el valor del TextBox
-                textBoxMedicamento.Text = idMedicamento.ToString();  // Si deseas mostrar el precio en formato moneda
+                // establecer el valor del TextBox
+                textBoxMedicamento.Text = idMedicamento.ToString();  // mostrar el precio en formato moneda
             }
         }
 
 
-        private void dataGridViewTratamientos_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) // Detectar que boton y fila ha sido pulsada
+        private void dataGridViewTratamientos_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) // detectar que boton y fila ha sido pulsada
         {
 
-            if (e.Button == MouseButtons.Right) // Si el botón clickeado es el derecho
+            if (e.Button == MouseButtons.Right) // si el botón clickeado es el derecho
             {
-                if (e.RowIndex >= 0) // Verificamos si se hace clic sobre una fila válida
+                if (e.RowIndex >= 0) // verificamos si se hace clic sobre una fila válida
                 {
-                    // Seleccionar la fila clickeada
+                    // seleccionar la fila clickeada
                     dataGridViewTratamientos.ClearSelection();
                     dataGridViewTratamientos.Rows[e.RowIndex].Selected = true;
                 }
@@ -124,7 +124,12 @@ namespace Treapptment
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int tratamientoId = (int)dataGridViewTratamientos.SelectedRows[0].Cells[0].Value; // Ya que está en la primera columna
+            if (dataGridViewTratamientos.SelectedRows.Count == 0 || dataGridViewTratamientos.SelectedRows[0].Index == -1)
+            {
+                MessageBox.Show("Seleccione un informe válido para eliminarSS.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int tratamientoId = (int)dataGridViewTratamientos.SelectedRows[0].Cells[0].Value; // ya que está en la primera columna
 
 
             try
@@ -155,21 +160,26 @@ namespace Treapptment
             }
         }
 
-        private void editarToolStripMenuItem_Click(object sender, EventArgs e) // Opción del menú contextual editar
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e) // opción del menú contextual editar
         {
-            // Rellena los campos del formulario con los datos de la fila a editar
+            if (dataGridViewTratamientos.SelectedRows.Count == 0 || dataGridViewTratamientos.SelectedRows[0].Index == -1)
+            {
+                MessageBox.Show("Seleccione un informe válido para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            // rellena los campos del formulario con los datos de la fila a editar
             textBoxIdTratamiento.Text = dataGridViewTratamientos.SelectedRows[0].Cells[0].Value.ToString();
             textBoxMedicamento.Text = dataGridViewTratamientos.SelectedRows[0].Cells[2].Value.ToString();
             textBoxFrecuencia.Text = dataGridViewTratamientos.SelectedRows[0].Cells[3].Value.ToString();
             textBoxDuracion.Text = dataGridViewTratamientos.SelectedRows[0].Cells[4].Value.ToString();
 
-            buttonEditar.Enabled = true; // Lo habilitamos para poder editar
+            buttonEditar.Enabled = true; // lo habilitamos para poder editar
             buttonGuardar.Enabled = false; // para no guardar como otra fila la que estamos editando
-            buttonCancelar.Visible = true; // Mosctrat boton de cancelar
+            buttonCancelar.Visible = true; // mosctrat boton de cancelar
 
         }
 
-        private void limpiar() // Vacía los campos del formulario
+        private void limpiar()
         {
             textBoxIdInforme.Text = _idInforme.ToString();
             textBoxIdTratamiento.Text = "";
@@ -182,7 +192,7 @@ namespace Treapptment
         {
             return int.TryParse(texto, out _); 
         }
-        private void buttonGuardar_Click(object sender, EventArgs e) // Almacena en la base de datos los campos del formulario
+        private void buttonGuardar_Click(object sender, EventArgs e) // almacena en la base de datos los campos del formulario
         {
             String idTratamiento = textBoxIdTratamiento.Text;
             String idInforme = _idInforme.ToString();
@@ -196,13 +206,13 @@ namespace Treapptment
              if ( string.IsNullOrEmpty(frecuencia) || string.IsNullOrEmpty(duracion) || string.IsNullOrEmpty(duracion))
             {
                 MessageBox.Show("Medicamento ID, frecuencia y duración son campos obligatorios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Detiene la ejecución del método y no hace nada
+                return; // detiene la ejecución del método y no hace nada
             }
             if (!(esFrecuenciaValida && esDuracionValida)) // si no son enteros ambos campos
             {
                 // Ambos valores son enteros válidos
                 MessageBox.Show("Duración y frecuencia deben ser valores enteros.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Detiene la ejecución del método y no hace nada
+                return; // detiene la ejecución del método y no hace nada
 
             }
             try

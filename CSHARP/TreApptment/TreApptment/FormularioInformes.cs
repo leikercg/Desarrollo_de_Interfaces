@@ -17,7 +17,7 @@ namespace Treapptment
             _idPaciente = idPaciente;
             CargarInformes();
 
-            // Bloqueamos unos textos y botones
+            // bloqueamos unos textos y botones
             textBoxIdInforme.Enabled = false;
             textBoxIdPaciente.Text = _idPaciente.ToString();
             textBoxIdPaciente.Enabled = false;
@@ -42,7 +42,11 @@ namespace Treapptment
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
+<<<<<<< HEAD
                 dataGridViewInformes.DataSource = dataTable; // rellena el data grid de manera dinámica, sin tener que indicar numero de columnas en diseño
+=======
+                dataGridViewInformes.DataSource = dataTable; // ellena el data grid de manera dinámica, sin tener que indicar numero de columnas en diseño
+>>>>>>> f7c285de91e1a13bd4005f294ec786a7349e358f
             }
             catch (Exception ex)
             {
@@ -62,15 +66,25 @@ namespace Treapptment
 
                 // abre el formulario de tratamientos y le pasa el idInforme
                 FormularioTratamientos formTratamientos = new FormularioTratamientos(idInforme);
-                formTratamientos.ShowDialog(); // Mostrar como ventana modal
+                formTratamientos.ShowDialog(); // mostrar como ventana modal
             }
 
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             // id del informe seleccionado
             int informeId = (int)dataGridViewInformes.SelectedRows[0].Cells[0].Value; // ya que esta en primera columna
+=======
+            if (dataGridViewInformes.SelectedRows.Count == 0 || dataGridViewInformes.SelectedRows[0].Index == -1)
+            {
+                MessageBox.Show("Seleccione un informe válido para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            // ID del informe seleccionado
+            int informeId = (int)dataGridViewInformes.SelectedRows[0].Cells[0].Value; // ya que está en primera columna
+>>>>>>> f7c285de91e1a13bd4005f294ec786a7349e358f
 
             try
             {
@@ -102,9 +116,14 @@ namespace Treapptment
             }
 
         }
-        private void editarToolStripMenuItem_Click(object sender, EventArgs e) // Opción de editar en el menu contextual
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e) // opción de editar en el menu contextual
         {
-            // Rellenamos los campos con la fina a editar
+            if (dataGridViewInformes.SelectedRows.Count == 0 || dataGridViewInformes.SelectedRows[0].Index == -1)
+            {
+                MessageBox.Show("Seleccione un informe válido para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            // rellenamos los campos con la fina a editar
             textBoxIdInforme.Text = dataGridViewInformes.SelectedRows[0].Cells[0].Value.ToString();
             textBoxIdPaciente.Text = dataGridViewInformes.SelectedRows[0].Cells[1].Value.ToString();
             textBoxFechaCrea.Text= dataGridViewInformes.SelectedRows[0].Cells[2].Value.ToString();
@@ -114,17 +133,17 @@ namespace Treapptment
             textBoxMotivo.Text = dataGridViewInformes.SelectedRows[0].Cells[6].Value.ToString();
             textBoxRecomendaciones.Text = dataGridViewInformes.SelectedRows[0].Cells[7].Value.ToString();
 
-            buttonEditar.Enabled = true; // Lo habilitamos para poder editar
+            buttonEditar.Enabled = true; // habilitamos para poder editar
             buttonGuardar.Enabled = false; // para no guardar como otra fila la que estamos editando
 
-            // Activamos el boton de cancelar
+            // activamos el boton de cancelar
             buttonCancelar.Visible = true;
 
         }
       
 
        
-        private void buttonEditar_Click(object sender, EventArgs e) // Edita en la base de datos
+        private void buttonEditar_Click(object sender, EventArgs e) // edita en la base de datos
         {
             // Recogemos los valores de los campos
             String informeId = textBoxIdInforme.Text;
@@ -136,21 +155,21 @@ namespace Treapptment
 
             if (string.IsNullOrEmpty(nombreMedico))
             {
-                nombreMedico = "Dr. Leiker"; // Para valor por defecto
+                nombreMedico = "Dr. Leiker"; // valor por defecto
             }
             if (string.IsNullOrEmpty(centroMedico))
             {
-                centroMedico = "Palafox"; // Para valor por defecto
+                centroMedico = "Palafox"; // valor por defecto
             }
             // Si no está el motivo de la visita 
             if (string.IsNullOrWhiteSpace(motivo))
             {
                 MessageBox.Show("El motivo no puede estar vacío.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Detiene la ejecución del método
+                return; // detener la ejecución del método
             }
 
             // Asignar la fecha de modificación con la fecha actual
-            string fechaMod = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); // Para usar la fecha de la edición
+            string fechaMod = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); // para usar la fecha de la edición
             try
             {
                 connection.Open();
@@ -208,7 +227,7 @@ namespace Treapptment
         private void button2_Click(object sender, EventArgs e)
         {
 
-            // Recogemos los valores de los campos
+            // recogemos los valores de los campos
             String idPaciente = textBoxIdPaciente.Text;
             String nombreMedico = textBoxMedico.Text;
             String centroMedico = textBoxCentro.Text;
@@ -217,25 +236,25 @@ namespace Treapptment
 
             if (string.IsNullOrEmpty(nombreMedico))
             {
-                nombreMedico = "Dr. Leiker"; // Para valor por defecto
+                nombreMedico = "Dr. Leiker"; // para valor por defecto
             }
             if (string.IsNullOrEmpty(centroMedico))
             {
-                centroMedico = "Palafox"; // Para valor por defecto
+                centroMedico = "Palafox"; // para valor por defecto
             }
 
             // Si no está el motivo de la visita 
             if (string.IsNullOrWhiteSpace(motivo))
             {
                 MessageBox.Show("El motivo no puede estar vacío.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Detiene la ejecución del método
+                return; // detener la ejecución
             }
 
             try
             {
                 connection.Open();
 
-                // Consulta SQL para crear un nuevo informe
+                // consulta SQL para crear un nuevo informe
                 string sql = @"INSERT INTO Informes 
                        (id_paciente, nombre_medico, centro_medico, motivo, recomendaciones)
                        VALUES
@@ -243,7 +262,7 @@ namespace Treapptment
 
                 SqlCommand command = new SqlCommand(sql, connection);
 
-                // Agregar parámetros a la consulta
+                // agregar parámetros a la consulta
                 command.Parameters.AddWithValue("@IdPaciente", idPaciente);
                 command.Parameters.AddWithValue("@NombreMedico", nombreMedico);
                 command.Parameters.AddWithValue("@CentroMedico", centroMedico);
@@ -251,10 +270,10 @@ namespace Treapptment
                 command.Parameters.AddWithValue("@Recomendaciones", recomendaciones);
 
               
-                // Ejecutar el comando
+                // ejecutar el comando
                 int filasAfectadas = command.ExecuteNonQuery();
 
-                // Verificar si se insertó un nuevo informe
+                // verificar si se insertó un nuevo informe
                 if (filasAfectadas > 0)
                 {
                     MessageBox.Show("Informe creado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -277,13 +296,13 @@ namespace Treapptment
         }
 
 
-        private void dataGridViewInformes_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) // Detectar que boton es pulsado para el menú contextual
+        private void dataGridViewInformes_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) // detectar que boton es pulsado para el menú contextual
         {
-            if (e.Button == MouseButtons.Right) // Si el botón clickeado es el derecho
+            if (e.Button == MouseButtons.Right) // si el botón clickeado es el derecho
             {
-                if (e.RowIndex >= 0) // Verificamos si se hace clic sobre una fila válida
+                if (e.RowIndex >= 0) // vificamos si se hace clic sobre una fila válida
                 {
-                    // Seleccionar la fila clickeada
+                    // sleccionar la fila clickeada
                     dataGridViewInformes.ClearSelection();
                     dataGridViewInformes.Rows[e.RowIndex].Selected = true;
                 }
@@ -291,7 +310,7 @@ namespace Treapptment
 
         }
 
-        private void limpiar() // Para limpiar los campos
+        private void limpiar() // pra limpiar los campos
         {
             textBoxIdInforme.Text = "";
             textBoxIdPaciente.Text = _idPaciente.ToString();
@@ -315,7 +334,7 @@ namespace Treapptment
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            DateTime fechaSeleccionada = dateTimePicker1.Value.Date;  // Usar .Date para asegurar que solo se considere la fecha sin la hora
+            DateTime fechaSeleccionada = dateTimePicker1.Value.Date;  // usr .Date para asegurar que solo se considere la fecha sin la hora
             int IdPaciente = _idPaciente;
             buttonVerTodos.Visible = true
                 .
@@ -326,11 +345,11 @@ namespace Treapptment
             {
                 connection.Open();
 
-                // Usamos CAST para comparar solo la fecha en SQL, sin considerar la hora
+                // umos CAST para comparar solo la fecha en SQL, sin considerar la hora
                 string sql = @"SELECT * FROM informes WHERE CAST(fecha_creacion AS DATE) = @fechaSeleccionada";
                 SqlCommand command = new SqlCommand(sql, connection);
 
-                // Pasamos la fecha como DateTime, no como string
+                // psamos la fecha como DateTime, no como string
                 command.Parameters.AddWithValue("@fechaSeleccionada", fechaSeleccionada);
                 command.Parameters.AddWithValue("@idPaciente", IdPaciente);
 
@@ -344,7 +363,7 @@ namespace Treapptment
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    dataGridViewInformes.DataSource = dataTable; // Rellena el data grid de manera dinámica
+                    dataGridViewInformes.DataSource = dataTable; // rellena el data grid de manera dinámica
                 }
                 else
                 {
