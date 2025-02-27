@@ -28,7 +28,7 @@ namespace Treapptment
 
         }
 
-        private void CargarInformes() // Cargar los informes en el datagrid
+        private void CargarInformes() // cargar los informes en el datagrid
         {
             connection = new SqlConnection(_cadenaDeConexion);
             string sql = "SELECT * FROM Informes WHERE id_paciente = @IdPaciente";
@@ -42,7 +42,7 @@ namespace Treapptment
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
-                dataGridViewInformes.DataSource = dataTable; // Rellena el data grid de manera dinámica, sin tener que indicar numero de columnas en diseño
+                dataGridViewInformes.DataSource = dataTable; // rellena el data grid de manera dinámica, sin tener que indicar numero de columnas en diseño
             }
             catch (Exception ex)
             {
@@ -54,13 +54,13 @@ namespace Treapptment
             }
         }
 
-        private void dataGridViewInformes_CellDoubleClick(object sender, DataGridViewCellEventArgs e) // Para abrir la ventana relacionada con el informe
+        private void dataGridViewInformes_CellDoubleClick(object sender, DataGridViewCellEventArgs e) // para abrir la ventana relacionada con el informe
         {
-            if (e.RowIndex >= 0) // Verifica que se haya hecho clic en una fila válida
+            if (e.RowIndex >= 0) // verifica que se haya hecho clic en una fila válida
             {
                 int idInforme = Convert.ToInt32(dataGridViewInformes.Rows[e.RowIndex].Cells["id_informe"].Value);
 
-                // Abre el formulario de tratamientos y le pasa el idInforme
+                // abre el formulario de tratamientos y le pasa el idInforme
                 FormularioTratamientos formTratamientos = new FormularioTratamientos(idInforme);
                 formTratamientos.ShowDialog(); // Mostrar como ventana modal
             }
@@ -69,8 +69,8 @@ namespace Treapptment
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // ID del informe seleccionado
-            int informeId = (int)dataGridViewInformes.SelectedRows[0].Cells[0].Value; // Ya que está en primera columna
+            // id del informe seleccionado
+            int informeId = (int)dataGridViewInformes.SelectedRows[0].Cells[0].Value; // ya que esta en primera columna
 
             try
             {
@@ -80,7 +80,7 @@ namespace Treapptment
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.Parameters.AddWithValue("@InformeId", informeId);
 
-                // Ejecutar la consulta
+                // ejecutar la consulta
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
@@ -317,7 +317,11 @@ namespace Treapptment
         {
             DateTime fechaSeleccionada = dateTimePicker1.Value.Date;  // Usar .Date para asegurar que solo se considere la fecha sin la hora
             int IdPaciente = _idPaciente;
-            buttonVerTodos.Visible = true;
+            buttonVerTodos.Visible = true
+                .
+                
+                
+                ;
             try
             {
                 connection.Open();
